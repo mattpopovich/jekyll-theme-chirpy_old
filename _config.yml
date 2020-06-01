@@ -8,38 +8,40 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Chirpy                          # the main title
+title: Matt Popovich                   # the main title
 
-tagline: A text-focused Jekyll theme.  # it will display as the sub-title
+tagline: What I'm working on           # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  A personal website for Matt Popovich, 
+  where he documents various things that he's working on
+  in hopes of helping others working on similar things.
 
 # Replace with the website url, e.g. 'https://username.github.io'
-url: 'protocol://domain'
+# There should be no slash '/' symbol at the end. 
+# <protocol>://<domain>
+url: 'http://www.mattpopovich.com'
 
-author: your_full_name                  # change to your full name
+author: Matt Popovich                   # change to your full name
 
-avatar: /assets/img/sample/avatar.jpg   # support internet resources
+avatar: /assets/img/sample/RROWLAND-412_400x400.jpg   # support internet resources
 
 github:
-  username: github_username             # change to your github username
+  username: mattpopovich                # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: mattpopovich                # change to your twitter username
 
 social:
-  name: your_full_name                  # it will shows as the copyright owner in Footer
-  email: example@doamin.com             # change to your email address
+  name: Matthew Popovich                # it will shows as the copyright owner in Footer
+  email: contact@mattpopovich.com       # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://twitter.com/mattpopovich      # change to your twitter homepage
+    - https://github.com/mattpopovich       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/popovichmatt
 
 google_site_verification: google_meta_tag_verification # change to your verification string
 
@@ -51,10 +53,10 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: America/Denver
 
 google_analytics:
-  id: ''          # Fill with your Google Analytics ID
+  id: 'UA-168124274-1'  # Fill with your Google Analytics ID
   pv:
     # The Google Analytics pageviews switch.
     # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
@@ -65,8 +67,8 @@ google_analytics:
     cache: false  # pv data local cache, good for the users from GFW area.
 
 disqus:
-  comments: false  # boolean type, the global switch for posts comments.
-  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  comments: true   # boolean type, the global switch for posts comments.
+  shortname: 'mattpopovich'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 
 # Prefer color scheme setting, available values:
