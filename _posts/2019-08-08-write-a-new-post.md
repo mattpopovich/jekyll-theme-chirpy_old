@@ -78,6 +78,8 @@ With the increasing number of posts, the number of categories and tags will incr
 
 ## Last modified date
 
+Testing last modified date...
+
 The last modified date of a post is obtained according to the post's latest git commit date, and the modified date of all posts are designed to be stored in the file `_data/updates.yml`. Then contents of that file may be as follows:
 
 ```yaml
