@@ -10,71 +10,59 @@ on:
 
 jobs:
   continuous-delivery:
+
     runs-on: ubuntu-latest
 
     env:
-      GEMS_PATH: /tmp/bundle
+      GEMS_PATH: ~/vendor/bundle
 
     steps:
-      - uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 2.6.x
-
-      - name: Install tools
-        run: |
-          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CC86BB64
-          sudo add-apt-repository ppa:rmescandon/yq
-          sudo apt update
-          sudo apt install yq -y
-
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # for posts's lastmod
+
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.7
 
       - name: Bundle Caching
-        id: bundle-cache
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ${{ env.GEMS_PATH }}
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      - name: Bundle config
+      - name: Bundle Install
         run: |
           bundle config path ${{ env.GEMS_PATH }}
-
-      - name: Bundle Install
-        if: steps.bundle-cache.outputs.cache-hit != 'true'
-        run: |
-          bundle install
-
-      - name: Bundle Install locally
-        if: steps.bundle-cache.outputs.cache-hit == 'true'
-        run: |
-          bundle install --local
+          bundle install --jobs 4 --retry 3
 
       - name: Check baseurl
         run: |
-          baseurl="$(grep '^baseurl:' _config.yml | yq r - baseurl)"
+          baseurl="$(grep '^baseurl:' _config.yml | sed "s/.*: *//;s/['\"]//g;s/#.*//")"
           if [[ -n $baseurl ]]; then
-            echo "::set-env name=SPEC_TEST::_site_no_baseurl"
+            echo "BASE_URL=$baseurl" >> $GITHUB_ENV
           fi
 
       - name: Build Site
+        env:
+          JEKYLL_ENV: production
         run: |
-          bash tools/build.sh
-
-          if [[ -n $SPEC_TEST ]]; then
-            # Bypass the defects of htmlproofer
-            bash tools/build.sh -b "" -d "$SPEC_TEST"
-          fi          
+          bundle exec jekyll b -d "_site$BASE_URL"
 
       - name: Test Site
         run: |
-          bash tools/test.sh "$SPEC_TEST"
+          bash tools/test.sh
 
       - name: Deploy
         run: |
+          if [[ -n $BASE_URL ]]; then
+            mv _site$BASE_URL _site-rename
+            rm -rf _site
+            mv _site-rename _site
+          fi
+
           bash tools/deploy.sh

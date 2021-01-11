@@ -1,6 +1,6 @@
 # Chirpy
 
-🌏 [English](../README.md) • 简体中文
+Language: [English](../README.md) | 简体中文
 
 [![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8220b926db514f13afc3f02b7f884f4b)](https://app.codacy.com/manual/cotes2020/jekyll-theme-chirpy?utm_source=github.com&utm_medium=referral&utm_content=cotes2020/jekyll-theme-chirpy&utm_campaign=Badge_Grade_Dashboard)
@@ -9,9 +9,9 @@
 
 一个不一样的 Jekyll 主题，采用响应式设计，方便记录、管理、分享你的知识和经验。[懂的进 »](https://chirpy.cotes.info)
 
-[![Devices Mockup](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/devices-mockup.png)](https://chirpy.cotes.info)
+[![Devices Mockup](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/devices-mockup.png)](https://chirpy.cotes.info)
 
-> ⚠️ 中文版文档存在更新不及时的风险（开源文档以英文为主，请见谅）。如果发现中、英文内容不匹配的情况，一切以英文版内容为准。如果您愿意的话，可提交 issuse 提醒作者更新中文版 README，谢谢。
+> :bulb: 中文版文档存在更新不及时的风险（开源文档以英文为主，请见谅）。如果发现中、英文内容不匹配的情况，一切以英文版内容为准。如果您愿意的话，可提交 issue 提醒作者更新中文版 README，谢谢。
 
 ## 目录
 
@@ -19,7 +19,7 @@
 - [安装](#安装)
 - [使用](#使用)
 - [参与贡献](#参与贡献)
-- [感谢](#感谢)
+- [鸣谢](#鸣谢)
 - [赞助](#赞助)
 - [许可证书](#许可证书)
 
@@ -33,6 +33,7 @@
 - 语法高亮
 - 二级目录
 - 数学表达式
+- Mermaid 图表
 - 搜索
 - Atom 订阅
 - Disqus 评论
@@ -51,7 +52,7 @@ $ git clone https://github.com/USERNAME/USERNAME.github.io.git -b master --singl
 
 ### 设置本地环境
 
-如果你想在本地运行或构建, 参考 [Jekyll Docs](https://jekyllrb.com/docs/installation/)安装 `Ruby`， `RubyGems` 和 `Bundler`。
+如果你想在本地运行或构建, 参考 [Jekyll Docs](https://jekyllrb.com/docs/installation/)安装 `Ruby`，`RubyGems`，`Jekyll` 和 `Bundler`。
 
 首次运行或构建时, 请先安装 Jekyll plugins。在项目根目录运行：
 
@@ -61,23 +62,16 @@ $ bundle install
 
 `bundle` 会自动安装 `Gemfile` 内指定的依赖插件。
 
-为了生成一些额外的文件（Post 的 _分类_、_标签_ 以及 _更新时间列表_），需要用到一些脚本工具。而它们需要安装依赖包 [yq](https://github.com/mikefarah/yq#install)。另外，如果你电脑的操作系统是 Debian 或者 macOS，还需安装 [GNU coreutils](https://www.gnu.org/software/coreutils/)：
+### 配置 Docker 镜像（可选）
 
-- Debian
+如果你是 [**Docker**](https://www.docker.com/) 的铁粉，或者不想在本地安装上述 [_设置本地环境_](#设置本地环境) 提到的包, 那么请确保先安装并运行了 **Docker Engine** 然后从 Docker Hub 获取镜像 `jekyll/jekyll`:
 
-  ```console
-  $ sudo apt-get install coreutils
-  ```
+```console
+$ docker pull jekyll/jekyll
+```
 
-- macOS
-
-  ```console
-  $ brew install coreutils
-  ```
 
 ## 使用
-
-运行 [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/) 需要一些额外的文件, 它们不能通过 Jekyll 原生的命令生成，所以请严格依照下列说明去运行或部署此项目。
 
 ### 初始化
 
@@ -112,15 +106,24 @@ $ bash tools/init.sh
 
 ### 本地运行
 
-使用以下工具可轻松运行:
+发布之前，在本地预览:
 
 ```terminal
-$ bash tools/run.sh
+$ bundle exec jekyll s
 ```
 
 访问本地服务： <http://localhost:4000>
 
-如果你想在本地服务运行后，把修改源文件的更改实时刷新，可使用选项 `-r` (或 `--realtime`)，不过要先安装依赖 [**fswatch**](http://emcrisostomo.github.io/fswatch/) 。
+### 用 Docker 运行
+
+在项目根目录运行命令:
+
+```terminal
+$ docker run -it --rm \
+    --volume="$PWD:/srv/jekyll" \
+    -p 4000:4000 jekyll/jekyll \
+    jekyll serve
+```
 
 ### 部署
 
@@ -130,13 +133,13 @@ $ bash tools/run.sh
 
 #### 部署到 GitHub Pages
 
-由于安全原因，GitHub Pages 的构建强制加了 `safe`参数，这导致了我们不能使用脚本工具去创建所需的附加页面。因此，我们可以使用 GitHub Actions 去构建站点，把站点文件存储在一个新分支上，再指定该分支作为 Pages 服务的源。
+由于安全原因，GitHub Pages 的构建强制加了 `safe`参数，这导致了我们不能使用插件去创建所需的附加页面。因此，我们可以使用 GitHub Actions 去构建站点，把站点文件存储在一个新分支上，再指定该分支作为 Pages 服务的源。
 
 1. 推送任意一个 commit 到 `origin/master` 以触发 GitHub Actions workflow。一旦 build 完毕并且成功，远端将会自动出现一个新分支 `gh-pages` 用来存储构建的站点文件。
 
 2. 回到 GitHub 上的仓库， 通过 _Settings_
  → _Options_ → _GitHub Pages_ 选择分支 `gh-pages` 作为[_发布源_](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site):
-    ![gh-pages-sources](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/gh-pages-sources.png)
+    ![gh-pages-sources](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190809/gh-pages-sources.png)
 
 3. 按照 GitHub 指示的地址去访问你的网站。
 
@@ -147,10 +150,20 @@ $ bash tools/run.sh
 在项目根目录，运行:
 
 ```console
-$ bash tools/build.sh -d /path/to/site/
+$ JEKYLL_ENV=production bundle exec jekyll b
 ```
 
-生成的静态文件将会在 `/path/to/site/`， 把内部的文件上传到服务器即可。
+或者通过 Docker 构建:
+
+```terminal
+$ docker run -it --rm \
+    --env JEKYLL_ENV=production \
+    --volume="$PWD:/srv/jekyll" \
+    jekyll/jekyll \
+    jekyll build
+```
+
+生成的静态文件将会在 `_site`， 把内部的文件上传到服务器即可。
 
 ### 文档
 
