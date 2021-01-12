@@ -33,7 +33,8 @@ The reason why I'm publishing this "preview" post/video instead of the actual vi
   2. WowGo is having a promotion to publish a video about their boards on YouTube, and that promotion ends on November 30th.
      - We're right down to the wire. I'm going to put out this "preview" post/video to "hold you over" until the full video is ready.
 
-![WowGo Promotion](/assets/img/sample/WowGoPromotion.png){: width="480"}
+![WowGo Promotion](/assets/img/sample/WowGoPromotion.png){: width="480" .right}
+_caption_
 
 ## Mini-review
 

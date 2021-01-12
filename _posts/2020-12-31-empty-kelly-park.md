@@ -7,6 +7,7 @@ categories: [Blog, YouTube] # <=2 values here: top category and sub category
 tags: [youtube, drone]     # TAG names should always be lowercase.
 layout: post
 pin: false
+toc: false
 ---
 
 
