@@ -9,12 +9,13 @@ layout: post
 pin: false
 ---
 
-
+<div style="text-align:center">
 <iframe width="560" height="315" 
 src="https://www.youtube.com/embed/uQCvAZjiesw"
 frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+</div>
 
 **Good morning YouTubers and YouTubettes! ...is that a thing?**
 
@@ -48,6 +49,26 @@ I'm currently in the midst of doing the highspeed highway range test and I'm doi
 
 ## Wrap-up
 
-Anywho, that's about a wrap for now. We'll see you very shortly once the full range test is published. Looking forward to that! Additionally, I'll leave a [recommended video](https://www.youtube.com/watch?v=hIAzeN5Y_1g) that I found while doing some electric skateboard research. I found [a guy](https://www.youtube.com/user/LongbeardVA) that was doing a review of a board and the camera angles that he was shooting at were **blowing my mind**. I didn't know if he had an... expert drone flyer (?) that was flying around and shooting footie of him or how exactly he was managing to get those angles. Spoiler alert, it's through a ~~[360° camera](https://www.insta360.com/product/insta360-onex/) on a selfie stick~~. Pretty cool video!
+Anywho, that's about a wrap for now. We'll see you very shortly once the full range test is published. Looking forward to that! Additionally, I'll leave a [recommended video](https://www.youtube.com/watch?v=hIAzeN5Y_1g) that I found while doing some electric skateboard research. I found [a guy](https://www.youtube.com/user/LongbeardVA) that was doing a review of a board and the camera angles that he was shooting at were **blowing my mind**. I didn't know if he had an... expert drone flyer (?) that was flying around and shooting footie of him or how exactly he was managing to get those angles. 
+
+<p>
+<details>
+	<summary>Spoiler alert, it's with a... (click to see spoiler)</summary> 
+
+	<a href="https://www.insta360.com/product/insta360-onex/">360° camera</a> on a selfie stick
+
+</details>
+</p>
+
+<div style="text-align:center">
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/hIAzeN5Y_1g"
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+
+Pretty cool video!
+
 
 Catch you very soon...
