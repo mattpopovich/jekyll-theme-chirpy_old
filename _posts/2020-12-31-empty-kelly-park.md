@@ -10,12 +10,13 @@ pin: false
 toc: false
 ---
 
-
+<div style="text-align:center">
 <iframe width="560" height="315" 
 src="https://www.youtube.com/embed/axX71GkO85Y"
 frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+</div>
 
 Just a quick video that I took in [Kelly Park](http://www.ocfl.net/cultureparks/parks.aspx?m=dtlvw&d=22#.X_t48-lKhcK), a fantastic hidden gem northwest of Orlando, Florida. 
 

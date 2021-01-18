@@ -9,12 +9,13 @@ layout: post
 pin: false
 ---
 
-
+<div style="text-align:center">
 <iframe width="560" height="315" 
 src="https://www.youtube.com/embed/uQCvAZjiesw"
 frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+</div>
 
 **Good morning YouTubers and YouTubettes! ...is that a thing?**
 
