@@ -17,10 +17,6 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 </div>
 
-**Good morning YouTubers and YouTubettes! ...is that a thing?**
-
-Matt Popovich here.
-
 ## What I'm working on
 
 So, I'm working on a post/video for the [WowGo 2S](https://wowgoboard.com/pages/wowgo-2s) electric longboard. I'm doing a range test in two of the three different modes and I'm also going to be doing a "highway" and a "city" range test. I have that *pretty much* wrapped up... I'm in the midst of doing the final highspeed city test right now, but, we're not done...yet.
@@ -67,6 +63,5 @@ allowfullscreen></iframe>
 </div>
 
 Pretty cool video!
-
 
 Catch you very soon...
