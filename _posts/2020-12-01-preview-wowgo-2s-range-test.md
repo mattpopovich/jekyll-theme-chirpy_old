@@ -22,7 +22,7 @@ allowfullscreen></iframe>
 So, I'm working on a post/video for the [WowGo 2S](https://wowgoboard.com/pages/wowgo-2s) electric longboard. I'm doing a range test in two of the three different modes and I'm also going to be doing a "highway" and a "city" range test. I have that *pretty much* wrapped up... I'm in the midst of doing the final highspeed city test right now, but, we're not done...yet.
 
 As I said in my [first post](/posts/first/#big-quote-guy): I plan on dishing out quotes throughout my posts. There's another quote that I like for this week which I think is very relevant to me, as a person, is ["don't let perfect be the enemy of good"](https://hbr.org/2020/03/dont-let-perfection-be-the-enemy-of-productivity). And, unfortunately, I think I've let that happen to me for this next video that I'm working on. I've spent way too much time trying to get video overlays working and trying to get additional camera angles, etc. Because of this, it's taken more time than I originally budgeted.
-![WowGo Promotion](/assets/img/posts/2020-12-01-preview-wowgo-2s-range-test/wow-go-promotion.jpg){: width="400" .right}
+![WowGo Promotion](/assets/img/posts/2020-12-01_preview-wowgo-2s-range-test/wow-go-promotion.jpg){: width="400" .right}
 
 ## Why I'm working on it
 
