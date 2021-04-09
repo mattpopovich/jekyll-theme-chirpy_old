@@ -110,9 +110,24 @@ else:
     print("Created folder: " + folder_path)
 
 
+# Make template post with header
+with open('post_middle.txt', 'r') as f:
+    post_middle = f.read()
 
+with open('post_ending.txt', 'r') as f:
+    post_ending = f.read()
 
-
+post_path = '../_posts/' + folder_name + '.md'
+print("Creating text post: " + post_path)
+with open(post_path, 'w') as f:
+    f.write('---\n')
+    f.write('# See defaults in _config\n')
+    f.write('title: "' + title + '"\n')
+    f.write('author: Matt Popovich\n')
+    f.write('date: ' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ' -0600\n')
+    f.write(post_middle)
+    f.write('https://www.youtube.com/embed/' + video_id)
+    f.write(post_ending)
 
 
 
