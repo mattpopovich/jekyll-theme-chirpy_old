@@ -2,7 +2,7 @@
 # See defaults in _config
 title: "How to install the Resynthesizer plugin for GIMP on Mac (2021)"
 author: Matt Popovich
-date: 2021-04-08 23:10:50 -0600
+date: 2021-04-08 23:28:02 -0600
 categories: [Blog, YouTube] # <=2 values here: top category and sub category
 tags: [youtube, todo]       # TAG names should always be lowercase
 layout: post

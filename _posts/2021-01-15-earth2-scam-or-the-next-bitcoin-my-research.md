@@ -23,7 +23,7 @@ allowfullscreen></iframe>
 
 I was minding my own business this Sunday when [Quora](https://www.quora.com/) interrupted me with a notification (little bit of a sidebar, I was watching the [Netflix movie](https://www.netflix.com/title/81254224), [The Social Dilemma](https://www.thesocialdilemma.com/) this weekend... highly recommend), which I fell trap to, so I opened their app and began scrolling. After a quick peruse, I ran into this post, which looked... interesting. Note that it's a promoted post (🚩) and I try to avoid these at all costs, but, against my own judgment, I began to read about this thing called "[Earth2](https://earth2.io/)". 
 
-![Earth2 promoted post on Quora](/assets/img/posts/2021-01-15_earth2-scam-or-the-next-bitcoin-my-research/quora-earth2-promoted-post.png){: width="480"}
+![Earth2 promoted post on Quora](/assets/img/posts/2021-01-15-earth2-scam-or-the-next-bitcoin-my-research/quora-earth2-promoted-post.png){: width="480"}
 
 ## What is Earth2? 
 
@@ -59,7 +59,7 @@ Another theme I see with these Earth2 posts is trying to give credibility to the
 
 I did some further digging through YouTube and was *disappointed, but not surprised* as to how many videos there are [promoting Earth2](https://www.youtube.com/results?search_query=earth2). Notice that nearly every video is giving out their referral code. It seems like people are advertising this over many different forms of social media. I've seen some younger people mention they're finding out about it via TikTok. I've even seen a few videos comparing Earth2 to bitcoin. One YouTube comment, in particular, was made on a video that Earth2 published. The (now edited/deleted) comment read "Imagine if this will going like bitcoin?". The comment even had a "love symbol" from Earth2 themselves! 🚩
 
-![Earth2 likes a comment on their video comparing Earth2 to bitcoin](/assets/img/posts/2021-01-15_earth2-scam-or-the-next-bitcoin-my-research/imagine-if-this-will-going-like-bitcoin.png)
+![Earth2 likes a comment on their video comparing Earth2 to bitcoin](/assets/img/posts/2021-01-15-earth2-scam-or-the-next-bitcoin-my-research/imagine-if-this-will-going-like-bitcoin.png)
 
 Let's actually compare this to bitcoin. Let's start by looking at bitcoin's website and see how many times they mention that you can make money buying bitcoin... Nothing on the [main page](https://bitcoin.org/), maybe we can find something in the [FAQ (Frequently Asked Questions)](https://bitcoin.org/en/faq):
  - Q: [Can I make money with bitcoin?](https://bitcoin.org/en/faq#can-i-make-money-with-bitcoin)
@@ -67,7 +67,7 @@ Let's actually compare this to bitcoin. Let's start by looking at bitcoin's webs
 
 Well, we were comparing this to someone's post that we read on Quora, let's actually check Earth2's website: [https://earth2.io/](https://earth2.io/). Well, they start things off with a ticker at the top of the website with land going up >30,000%... That's not sustainable but okay, it's subtle enough, maybe they haven't actually said anywhere that 'this will make you money'. 
 
-![Earth2 land prices increasing >30,000%](/assets/img/posts/2021-01-15_earth2-scam-or-the-next-bitcoin-my-research/earth2-prices.png)
+![Earth2 land prices increasing >30,000%](/assets/img/posts/2021-01-15-earth2-scam-or-the-next-bitcoin-my-research/earth2-prices.png)
 
 And a side note that if you're scrolling through their website, you will come across their intro video, which, I will give them credit, is *pretty slick*! 
 
@@ -81,7 +81,7 @@ allowfullscreen></iframe>
 
 Continuing to scroll down the page you will find a section titled "Make profit now". Oof. That's quite blatant and I don't think I need to elaborate on that any further. 🚩
 
-![Earth2: Make Profit Now](/assets/img/posts/2021-01-15_earth2-scam-or-the-next-bitcoin-my-research/earth2-make-profit-now.png)
+![Earth2: Make Profit Now](/assets/img/posts/2021-01-15-earth2-scam-or-the-next-bitcoin-my-research/earth2-make-profit-now.png)
 
 ## Depositing vs Withdrawing
 
@@ -106,13 +106,13 @@ If they're doing this via email, then it's not automated. Users have posted imag
 
 And now, as the magician says: "For my final trick, I will disappear!". Well, not me, just your dollars. Before giving your money to any website, you should always read the terms and conditions. I'll be honest with you, I didn't read the whole thing, but just a quick skim gave me two massive red flags (🚩🚩). The first being this typo in the terms and conditions: 
 
-![Typo in Earth2 Terms and Conditions](/assets/img/posts/2021-01-15_earth2-scam-or-the-next-bitcoin-my-research/earth2-toc-typo.png)
+![Typo in Earth2 Terms and Conditions](/assets/img/posts/2021-01-15-earth2-scam-or-the-next-bitcoin-my-research/earth2-toc-typo.png)
 
 Did they not have anyone proofread this? 
 
 Finally, the big kicker, the moment you've all been waiting for: 
 
-![We reserve the right in the future to convert your holding of Virtual Land (or any equivalent credits held in the Earth2 platform) to an equivalent value of a crypto-currency that we may create in the future. Any conversion would be conducted at a valuation reasonably determined by us.](/assets/img/posts/2021-01-15_earth2-scam-or-the-next-bitcoin-my-research/earth2-conversion.png)
+![We reserve the right in the future to convert your holding of Virtual Land (or any equivalent credits held in the Earth2 platform) to an equivalent value of a crypto-currency that we may create in the future. Any conversion would be conducted at a valuation reasonably determined by us.](/assets/img/posts/2021-01-15-earth2-scam-or-the-next-bitcoin-my-research/earth2-conversion.png)
 
 Soooo, in other words, whenever they get tired of letting people withdraw $USD, they will ~~let~~ *make* you withdraw Earth2 bucks. Or, if you're lucky, maybe even [Schrute bucks](https://www.youtube.com/watch?v=vPeRElll3Hw). 🚩
 

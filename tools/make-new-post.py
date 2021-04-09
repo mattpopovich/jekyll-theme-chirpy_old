@@ -69,9 +69,6 @@ parser.add_argument('--youtube-link', '-y', type=str,
 
 args = parser.parse_args()
 
-args.youtube_link = 'https://youtu.be/MHwtKg0tws8'
-
-
 # Get video ID from YouTube Link (string parsing)
 print("Received YouTube video link: {}".format(args.youtube_link))
 url_parts = urllib.parse.urlparse(args.youtube_link)
@@ -99,7 +96,7 @@ title = data['title']
 title_no_space = title.lower().replace(' ', '-')
 title_for_folder = ''.join(c for c in title_no_space if c.isalnum() or c == '-')
 
-folder_name = date_for_folder + '_' + title_for_folder
+folder_name = date_for_folder + '-' + title_for_folder
 folder_path = '../assets/img/posts/' + folder_name
 
 # Create folder for images
