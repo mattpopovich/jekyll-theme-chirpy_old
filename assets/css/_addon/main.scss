@@ -753,6 +753,16 @@ img {
   em { /* MarkDown italic */
     padding-right: 0.2rem;
   }
+  my-caption { // Custom tag for captioning an image/code/etc. Matches img-caption + em
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: 90%;
+    padding: 0;
+    line-height: 0pt;      // Applies to both bottom and top spacing
+    padding-bottom: 20pt;  // Applies to only bottom spacing
+    color: #6d6c6c;
+  }
   a:hover {
     code {
       @extend %link-hover;
@@ -835,7 +845,7 @@ img {
       display: block;
       text-align: center;
       font-style: normal;
-      font-size: 80%;
+      font-size: 90%;
       padding: 0;
       color: #6d6c6c;
     }
