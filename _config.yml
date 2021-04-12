@@ -1,9 +1,17 @@
-# The Site Settings
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT licensed
+# The Site Configuration
 
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# Only if your site type is GitHub Project sites and doesn't have a custom domain,
+# change below value to '/projectname'.
+baseurl: ''
+
+# the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
+lang: en-US
+
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: America/Denver
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
@@ -20,8 +28,6 @@ description: >-                        # used by seo meta and the atom feed
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://www.mattpopovich.com'
 
-author: Matt Popovich                # change to your full name
-
 github:
   username: mattpopovich                # change to your github username
 
@@ -29,6 +35,8 @@ twitter:
   username: mattpopovich            # change to your twitter username
 
 social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Matthew Popovich                # it will shows as the copyright owner in Footer
   email: contact@mattpopovich.com       # change to your email address
   links:
@@ -42,29 +50,12 @@ social:
 google_site_verification: google_meta_tag_verification # change to your verification string
 # --------------------------
 
-
-# Only if your site type is GitHub Project sites and doesn't have a custom domain,
-# change below value to '/projectname'.
-baseurl: ''
-
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: America/Denver
-
 google_analytics:
   id: 'UA-168124274-1'          # Fill with your Google Analytics ID
+  # Google Analytics pageviews report settings
   pv:
-    # The Google Analytics pageviews switch.
-    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
-    enabled: false
-    # the next options only valid when `google_analytics.pv` is enabled.
-    proxy_url: ''
-    proxy_endpoint: ''
-    cache: false  # pv data local cache, good for the users from GFW area.
-
-disqus:
-  comments: true  # boolean type, the global switch for posts comments.
-  shortname: 'mattpopovich'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
+    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
+    cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
 # Prefer color scheme setting.
 #
@@ -75,7 +66,6 @@ disqus:
 # Available options:
 #
 #     light  - Use the light color scheme
-#
 #     dark   - Use the dark color scheme
 #
 theme_mode:   # [light|dark]
@@ -93,7 +83,13 @@ avatar: /assets/img/sample/RROWLAND-412_400x400.jpg
 # boolean type, the global switch for ToC in posts.
 toc: true
 
+disqus:
+  comments: true  # boolean type, the global switch for posts comments.
+  shortname: 'mattpopovich'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
 paginate: 10
+
+# ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
   syntax_highlighter: rouge
@@ -107,7 +103,7 @@ kramdown:
       start_line: 1
 
 # DO NOT change this unless you're a Pro user on Jekyll and Web development,
-# or you think you're smart enough to change other relevant URLs within this template.
+# Or you think you're smart enough to change other relevant URLs within this template.
 permalink: /posts/:title/
 
 collections:
@@ -125,10 +121,6 @@ defaults:
       layout: post
       comments: true    # Enable comments in posts.
       toc: true         # Display TOC column in posts.
-      breadcrumb:
-        -
-          label: Posts
-          url: /
   -
     scope:
       path: _drafts
@@ -136,47 +128,14 @@ defaults:
       comments: false
   -
     scope:
-      path: index.html
-    values:
-      breadcrumb:
-        -
-          label: Posts
-  -
-    scope:
-      path: tags
-    values:
-      breadcrumb:
-        -
-          label: Home
-          url: /
-        -
-          label: Tags
-          url: /tabs/tags/
-  -
-    scope:
-      path: categories
-    values:
-      breadcrumb:
-        -
-          label: Home
-          url: /
-        -
-          label: Categories
-          url: /tabs/categories/
-  -
-    scope:
       path: ''
       type: tabs             # see `site.collections`
     values:
       layout: page
+      permalink: /:title/
       dynamic_title: true    # Hide title in mobile screens.
-      breadcrumb:
-        -
-          label: Home
-          url: /
 
 sass:
-  sass_dir: /assets/css
   style: compressed
 
 compress_html:
@@ -190,12 +149,18 @@ compress_html:
 
 exclude:
   - vendor
-  - Gemfile.lock
   - Gemfile
+  - Gemfile.lock
+  - '*.gem'
+  - '*.gemspec'
   - tools
   - docs
   - README.md
   - LICENSE
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - package-lock.json
 
 jekyll-archives:
   enabled: [categories, tags]
