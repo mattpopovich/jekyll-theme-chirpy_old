@@ -1,6 +1,7 @@
 # Quick little script for creating a new post
 #   It will create a new post in _posts/, auto-populate it with some basic 
 #   text, and create a folder in assets/img/posts/
+# TOOD: Clean up this mess
 
 # Imports
 import argparse
@@ -17,6 +18,7 @@ from requests_html import HTMLSession
 from bs4 import BeautifulSoup as bs # importing BeautifulSoup
 
 # Via: https://www.thepythoncode.com/article/get-youtube-data-python
+#      https://github.com/x4nth055/pythoncode-tutorials/blob/master/web-scraping/youtube-extractor/extract_video_info.py
 def get_video_info(url):
     # init session
     session = HTMLSession()
@@ -44,11 +46,11 @@ def get_video_info(url):
     result["tags"] = ', '.join([ meta.attrs.get("content") for meta in soup.find_all("meta", {"property": "og:video:tag"}) ])
     # number of likes
     text_yt_formatted_strings = soup.find_all("yt-formatted-string", {"id": "text", "class": "ytd-toggle-button-renderer"})
-    result["likes"] = int(''.join([ c for c in text_yt_formatted_strings[0].attrs.get("aria-label") if c.isdigit() ]))
-    result['likes'] = 0 if result['likes'] == '' else result['likes']
+    result["likes"] = ''.join([ c for c in text_yt_formatted_strings[0].attrs.get("aria-label") if c.isdigit() ])
+    result['likes'] = 0 if result['likes'] == '' else int(result['likes'])
     # number of dislikes
     result["dislikes"] = ''.join([ c for c in text_yt_formatted_strings[1].attrs.get("aria-label") if c.isdigit() ])
-    result['dislikes'] = 0 if result['dislikes'] == '' else result['dislikes']
+    result['dislikes'] = 0 if result['dislikes'] == '' else int(result['dislikes'])
 
     # channel details
     channel_tag = soup.find("yt-formatted-string", {"class": "ytd-channel-name"}).find("a")
