@@ -66,6 +66,8 @@ parser = argparse.ArgumentParser(description="Automatically create some basic fi
 parser.add_argument('--youtube-link', '-y', type=str,
                     help='Link to the YouTube video that the blog post is based '
                          'upon, will auto-populate a few fields from here')
+# TODO: Allow this script to work without a YouTube link 
+# #     Ex. Just specifing a post title
 
 args = parser.parse_args()
 

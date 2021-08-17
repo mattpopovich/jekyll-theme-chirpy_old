@@ -4,7 +4,7 @@ title: "2021 Fireworks Over Denver - Aerial View"
 author: Matt Popovich
 date: 2021-07-18 22:30:30 -0600
 categories: [Blog, YouTube] # <=2 values here: top category and sub category
-tags: [youtube, drone, photography, todo]       # TAG names should always be lowercase
+tags: [youtube, drone, photography]       # TAG names should always be lowercase
 layout: post
 pin: false
 ---
