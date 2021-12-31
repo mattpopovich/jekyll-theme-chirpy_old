@@ -179,7 +179,7 @@ If the above seemed like too much, we can get similar results to the Resynthesiz
 
 That's a wrap! Thanks again to [Werner Eugster](http://homepage.agrl.ethz.ch/eugsterw/).
 
-If you have any questions or comments, feel free to comment in Disqus below. 
+If you have any questions or suggestions, feel free to comment in Disqus below. 
 
 Catch you in the next one!
 
