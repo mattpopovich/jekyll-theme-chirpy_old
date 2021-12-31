@@ -23,11 +23,11 @@ allowfullscreen></iframe>
 Happy belated Valentine's Day to all you love birds out there. 🐦 Today, to celebrate [bitcoin breaking $50k](https://twitter.com/MattPopovich/status/1361942388533436418) (yes, that's fifty thousand dollars), we're going to be discussing it and how tens of millions of people now have exposure to it overnight. Let's dive in! 
 
 ## Exposure to bitcoin
-Little bit of a clickabait title there, but I'll come clean about it upfront. Millions of people now have *exposure* to bitcoin in their portfolios. Whether they like it or not, bitcoin is in their portfolios. It might not be a lot of bitcoin, but it is there. 
+Little bit of a clickbait title there, but I'll come clean about it upfront. Millions of people now have *exposure* to bitcoin in their portfolios. Whether they like it or not, bitcoin is in their portfolios. It might not be a lot of bitcoin, but it is there. 
 
 They have this exposure via their retirement accounts. [More than 58 million Americans have a retirement account](https://www.ici.org/faqs/faq/401k/faqs_401k). Those retirement accounts will invest in indexes that track the Standard & Poor's 500 Index, also known as (AKA) the S&P 500, or simply the S&P. 
 
-Tesla was [recently added to the S&P](https://www.wsj.com/graphics/tesla-stock-joins-the-sp500/) and Tesla just bought $1.5B worth of bitcoin. I'm no math major, but, by the [transitive property](https://brilliant.org/wiki/transitive-property/), anyone that has a retirement account actually buys a bit of the S&P 500 which contains a bit of Tesla, which contains a little bit of bitcoin... Let's dig a little bit further. 
+Tesla was [recently added to the S&P](https://www.wsj.com/graphics/tesla-stock-joins-the-sp500/) and Tesla just bought $1.5B worth of bitcoin. I'm no math major, but, by the [transitive property](https://brilliant.org/wiki/transitive-property/), anyone that has a retirement account likely buys a bit of the S&P 500 which contains a bit of Tesla, which contains a little bit of bitcoin... Let's dig a little bit further. 
 
 ## Tesla buys bitcoin
 Last Monday (February 8, 2021), Tesla made a filing with the SEC ([Tesla 2020 Form 10-K](https://www.sec.gov/ix?doc=/Archives/edgar/data/1318605/000156459021004599/tsla-10k_20201231.htm)) stating (see page 23, emphasis mine)
@@ -43,12 +43,13 @@ About two months ago, [Tesla was added to the S&P 500](https://www.wsj.com/graph
 - most recent quarter's earnings be positive
 - **sum of its trailing four consecutive quarters' earnings be positive**
 
-What is the S&P 500? It's a list of 500 large companies in the U.S. It's pretty much a "who's who" of the United States' corporate sector. It's weighted by market cap, thus, the larger the company, the larger the effect it has on the price of the index. Retirement accounts want to be diversified as to reduce risk such that if one company may go bankrupt, you're still invested in their competitors and many other companies so that your portfolio doesn't also... go bankrupt. Retirement accounts will do this through [ETF](https://www.investopedia.com/terms/e/etf.asp)s that track the S&P ($SPY, $VOO, $IVV, etc). Basically, one share of an ETF that tracks the S&P [will hold](https://www.investopedia.com/articles/investing/122215/spy-spdr-sp-500-trust-etf.asp): 
+What is the [S&P 500](https://en.wikipedia.org/wiki/S&P_500)? It's a list of 500 large companies in the U.S. It's pretty much a "who's who" of the United States' corporate sector. It's weighted by market cap; thus, the larger the company, the larger the effect it has on the price of the index. Retirement accounts want to be diversified as to reduce risk such that if one company may go bankrupt, you're still invested in their competitors and many other companies so that your portfolio doesn't also... go bankrupt. Retirement accounts will do this through [ETF](https://www.investopedia.com/terms/e/etf.asp)s that track the S&P ($SPY, $VOO, $IVV, etc). Basically, one share of an ETF that tracks the S&P [will hold](https://www.investopedia.com/articles/investing/122215/spy-spdr-sp-500-trust-etf.asp): 
 - 6.56% Apple
 - 5.39% Microsoft
 - 4.38% Amazon
 - 2.10% Facebook
-etc, etc, etc... **but**, it will also have 1.58% Tesla. 
+
+etc, etc, etc... **but**, it will also have <ins>1.58% Tesla</ins>. 
 
 Remember when I said Tesla bought $1.5B worth of bitcoin? Well, their market cap is ~$750B. So, technically, they are $1.5B / $750B ~ 0.2% bitcoin! 
 
