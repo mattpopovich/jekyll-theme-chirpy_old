@@ -16,16 +16,17 @@
 #   noblank: true
 
 # Uncomment and complete the url below to enable more contact options
-# -
-#   type: mastodon
-#   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your mastodon account page
--
-  icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-  url:  'https://www.linkedin.com/in/popovichmatt/'  # Fill with your Linkedin homepage
-# -
-#   type: stack-overflow
-#   icon: 'fab fa-stack-overflow'
-#   url:  ''                  # Fill with your stackoverflow homepage
+# icons powered by <https://fontawesome.com/>
 
-# TODO: Add Instagram
+-
+  icon: 'fab fa-linkedin'
+  url:  'https://www.linkedin.com/in/popovichmatt/'
+
+-
+  icon: 'fab fa-youtube'
+  url: https://www.youtube.com/channel/UCsEQjjJ5qzV4GPahJciMOpw
+
+-
+  icon: 'fab fa-instagram'
+  url: https://www.instagram.com/mattcracklepops/
+
