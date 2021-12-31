@@ -1,26 +1,9 @@
 #  The contact options.
+#   Icons powered by <https://fontawesome.com/>
 
--
-  type: github
-  icon: 'fab fa-github-alt'
 -
   type: twitter
   icon: 'fab fa-twitter'
--
-  type: email
-  icon: 'fas fa-envelope'
-  noblank: true            # open link in current tab
-# -
-#   type: rss
-#   icon: 'fas fa-rss'
-#   noblank: true
-
-# Uncomment and complete the url below to enable more contact options
-# icons powered by <https://fontawesome.com/>
-
--
-  icon: 'fab fa-linkedin'
-  url:  'https://www.linkedin.com/in/popovichmatt/'
 
 -
   icon: 'fab fa-youtube'
@@ -30,3 +13,25 @@
   icon: 'fab fa-instagram'
   url: https://www.instagram.com/mattcracklepops/
 
+-
+  icon: 'fab fa-linkedin'
+  url:  'https://www.linkedin.com/in/popovichmatt/'
+
+-
+  type: github
+  icon: 'fab fa-github'
+
+-
+  type: email
+  icon: 'fas fa-envelope'
+  noblank: true            # open link in current tab
+
+  # TOOD: Add link to bitcoin donation address
+#-
+#  icon: 'fab fa-bitcoin'
+#  url: 'bitcoin:xxxx'
+
+# -
+#   type: rss
+#   icon: 'fas fa-rss'
+#   noblank: true
