@@ -82,6 +82,8 @@ If your AirPods Pro pass that test, then they're probably legit.
 
 That's a wrap! If you have any questions or concerns, feel free to comment in Disqus below. 
 
+&nbsp; 
+
 <div style="text-align:center">
 <iframe
 src="https://open.spotify.com/embed/track/2VguK07DWqquo0CloS5sSX" 

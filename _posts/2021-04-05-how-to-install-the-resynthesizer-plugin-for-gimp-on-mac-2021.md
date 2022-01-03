@@ -183,8 +183,7 @@ If you have any questions or suggestions, feel free to comment in Disqus below.
 
 Catch you in the next one!
 
-
-
+&nbsp;
 
 <div style="text-align:center">
 <iframe

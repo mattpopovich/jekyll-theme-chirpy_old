@@ -68,7 +68,7 @@ To take the old wipers off, you'll need to push the button on the wipers, then l
 
 Screenshot from my Tutorial Video | Screenshot from Owner's Manual |
 :--------------------------------:|:------------------------------:
-[![Screenshot of how to remove windshield wipers: push button, pull wiper away from harness, pull wioper out of harness](/assets/img/posts/2021-04-27-how-to-replace-audi-a3-wiper-blades-easy/wiper-blade-removal-big-crop.jpg)](https://youtu.be/A3U3xpzBH2c?t=102) | [![Audi A3 manual instructions to replace the front windshield wipers](/assets/img/posts/2021-04-27-how-to-replace-audi-a3-wiper-blades-easy/replace-wiper-blades.jpg)](https://ownersmanuals2.com/audi/a3-sedan-s3-sedan-2015-owners-manual-71870/page-52)
+[![Screenshot of how to remove windshield wipers: push button, pull wiper away from harness, pull wioper out of harness](/assets/img/posts/2021-04-27-how-to-replace-audi-a3-wiper-blades-easy/wiper-blade-removal-crop.jpg)](https://youtu.be/A3U3xpzBH2c?t=102) | [![Audi A3 manual instructions to replace the front windshield wipers](/assets/img/posts/2021-04-27-how-to-replace-audi-a3-wiper-blades-easy/replace-wiper-blades.jpg)](https://ownersmanuals2.com/audi/a3-sedan-s3-sedan-2015-owners-manual-71870/page-52)
 
 
 ## Put the new wipers on
