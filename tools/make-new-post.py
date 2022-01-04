@@ -10,6 +10,7 @@ import urllib.request
 import json
 import os               # Finding if folder exists
 import datetime         # For parsing date strings
+import re               # Regex
 
 from pathlib import Path
 
@@ -32,34 +33,37 @@ def get_video_info(url):
     # open("index.html", "w").write(response.html.html)
     # initialize the result
     result = {}
-    # video title
-    result["title"] = soup.find("meta", itemprop="name")['content']
-    # video views
-    result["views"] = soup.find("meta", itemprop="interactionCount")['content']
-    # video description
-    result["description"] = soup.find("meta", itemprop="description")['content']
-    # date published
-    result["date_published"] = soup.find("meta", itemprop="datePublished")['content']
-    # get the duration of the video
-    result["duration"] = soup.find("span", {"class": "ytp-time-duration"}).text
-    # get the video tags
+	# video title	
+    result["title"] = soup.find("meta", itemprop="name")['content']	
+    # video views	
+    result["views"] = soup.find("meta", itemprop="interactionCount")['content']	
+    # video description	
+    result["description"] = soup.find("meta", itemprop="description")['content']	
+    # date published	
+    result["date_published"] = soup.find("meta", itemprop="datePublished")['content']	
+    # get the duration of the video	
+    result["duration"] = soup.find("span", {"class": "ytp-time-duration"}).text	
+    # get the video tags	
     result["tags"] = ', '.join([ meta.attrs.get("content") for meta in soup.find_all("meta", {"property": "og:video:tag"}) ])
+    # Additional video and channel information (with help from: https://stackoverflow.com/a/68262735)
+    data = re.search(r"var ytInitialData = ({.*?});", soup.prettify()).group(1)
+    data_json = json.loads(data)
+    videoPrimaryInfoRenderer = data_json['contents']['twoColumnWatchNextResults']['results']['results']['contents'][0]['videoPrimaryInfoRenderer']
+    videoSecondaryInfoRenderer = data_json['contents']['twoColumnWatchNextResults']['results']['results']['contents'][1]['videoSecondaryInfoRenderer']
     # number of likes
-    text_yt_formatted_strings = soup.find_all("yt-formatted-string", {"id": "text", "class": "ytd-toggle-button-renderer"})
-    result["likes"] = ''.join([ c for c in text_yt_formatted_strings[0].attrs.get("aria-label") if c.isdigit() ])
-    result["likes"] = 0 if result['likes'] == '' else int(result['likes'])
-    # number of dislikes
-    result["dislikes"] = ''.join([ c for c in text_yt_formatted_strings[1].attrs.get("aria-label") if c.isdigit() ])
-    result['dislikes'] = 0 if result['dislikes'] == '' else int(result['dislikes'])
-
+    likes_label = videoPrimaryInfoRenderer['videoActions']['menuRenderer']['topLevelButtons'][0]['toggleButtonRenderer']['defaultText']['accessibility']['accessibilityData']['label']
+    result["likes"] = int(likes_label.split(' ')[0])
+    # number of dislikes - YouTube does not publish this anymore...?
+    # result["dislikes"] = ''.join([ c for c in text_yt_formatted_strings[1].attrs.get("aria-label") if c.isdigit() ])	
+    # result['dislikes'] = 0 if result['dislikes'] == '' else int(result['dislikes'])	
     # channel details
-    channel_tag = soup.find("yt-formatted-string", {"class": "ytd-channel-name"}).find("a")
+    channel_tag = videoSecondaryInfoRenderer['owner']['videoOwnerRenderer']['navigationEndpoint']['commandMetadata']['webCommandMetadata']['url']
     # channel name
-    channel_name = channel_tag.text
+    channel_name = videoSecondaryInfoRenderer['owner']['videoOwnerRenderer']['title']['runs'][0]['text']
     # channel URL
-    channel_url = f"https://www.youtube.com{channel_tag['href']}"
+    channel_url = f"https://www.youtube.com{channel_tag}"
     # number of subscribers as str
-    channel_subscribers = soup.find("yt-formatted-string", {"id": "owner-sub-count"}).text.strip()
+    channel_subscribers = videoSecondaryInfoRenderer['owner']['videoOwnerRenderer']['subscriberCountText']['accessibility']['accessibilityData']['label']
     result['channel'] = {'name': channel_name, 'url': channel_url, 'subscribers': channel_subscribers}
     return result
 
@@ -72,6 +76,10 @@ parser.add_argument('--youtube-link', '-y', type=str,
 # #     Ex. Just specifing a post title
 
 args = parser.parse_args()
+# args.youtube_link = 'https://youtu.be/JuFTTGWe_HQ' # tesla swerve
+# args.youtube_link = "https://www.youtube.com/watch?v=Hv6EMd8dlQk" #joma
+# args.youtube_link = "https://youtu.be/ALsLiy4sLIQ" #airpods
+# args.youtube_link = "https://www.youtube.com/watch?v=L2Pp3c7fN3E" #853 likes 
 
 # Get video ID from YouTube Link (string parsing)
 print("Received YouTube video link: {}".format(args.youtube_link))
@@ -134,6 +142,4 @@ with open(post_path, 'w') as f:
     f.write(post_middle)
     f.write('https://www.youtube.com/embed/' + video_id)
     f.write(post_ending)
-
-
 
