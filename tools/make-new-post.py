@@ -11,6 +11,7 @@ import json
 import os               # Finding if folder exists
 import datetime         # For parsing date strings
 import re               # Regex
+import sys              # To exit script on error
 
 from pathlib import Path
 
@@ -72,6 +73,13 @@ def get_video_info(url):
     result['channel'] = {'name': channel_name, 'url': channel_url, 'subscribers': channel_subscribers}
     return result
 
+# ---- Main part of script ----
+
+# Make sure we are running the script from the correct directory
+if not os.path.exists('make-new-post.py'):
+    print("ERROR: make-new-post.py is being ran from the wrong location")
+    print("       Please cd to tools/ then run the script from there")
+    sys.exit()
 
 parser = argparse.ArgumentParser(description="Automatically create some basic files for a new blog post")
 parser.add_argument('--youtube-link', '-y', type=str,
@@ -83,8 +91,8 @@ parser.add_argument('--youtube-link', '-y', type=str,
 args = parser.parse_args()
 # args.youtube_link = 'https://youtu.be/JuFTTGWe_HQ' # tesla swerve
 # args.youtube_link = "https://www.youtube.com/watch?v=Hv6EMd8dlQk" #joma
-# args.youtube_link = "https://youtu.be/ALsLiy4sLIQ" #airpods
-args.youtube_link = "https://www.youtube.com/watch?v=L2Pp3c7fN3E" #853 likes Renee Ritchie
+args.youtube_link = "https://youtu.be/ALsLiy4sLIQ" #airpods
+# args.youtube_link = "https://www.youtube.com/watch?v=L2Pp3c7fN3E" #853 likes Renee Ritchie
 
 # Get video ID from YouTube Link (string parsing)
 print("Received YouTube video link: {}".format(args.youtube_link))
@@ -123,7 +131,7 @@ folder_path = '../assets/img/posts/' + folder_name
 
 # Create folder for images
 if os.path.exists(folder_path): 
-    print("Folder path was already created: " + folder_path)
+    print("WARNING: folder path was already created: " + folder_path)
 else:
     os.makedirs(folder_path)
     print("Created folder: " + folder_path)
@@ -138,13 +146,21 @@ with open('post_ending.txt', 'r') as f:
 
 post_path = '../_posts/' + folder_name + '.md'
 print("Creating text post: " + post_path)
-with open(post_path, 'w') as f:
-    f.write('---\n')
-    f.write('# See defaults in _config\n')
-    f.write('title: "' + title + '"\n')
-    f.write('author: Matt Popovich\n')
-    f.write('date: ' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ' -0600\n')
-    f.write(post_middle)
-    f.write('https://www.youtube.com/embed/' + video_id)
-    f.write(post_ending)
+
+# Make sure the post isn't already created before we overwrite it
+if os.path.exists(post_path):
+    print("ERROR: Text post was already created. ")
+    print("       Check to ensure that you do not need the text post, then "
+                 "delete it and run this script again for the text post to be "
+                 "populated with template text")
+else:
+    with open(post_path, 'w') as f:
+        f.write('---\n')
+        f.write('# See defaults in _config\n')
+        f.write('title: "' + title + '"\n')
+        f.write('author: Matt Popovich\n')
+        f.write('date: ' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ' -0600\n')
+        f.write(post_middle)
+        f.write('https://www.youtube.com/embed/' + video_id)
+        f.write(post_ending)
 
