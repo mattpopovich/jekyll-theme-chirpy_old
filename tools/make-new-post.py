@@ -1,6 +1,7 @@
 # Quick little script for creating a new post
 #   It will create a new post in _posts/, auto-populate it with some basic 
 #   text, and create a folder in assets/img/posts/
+# TOOD: Clean up this mess
 
 # Imports
 import argparse
@@ -16,7 +17,8 @@ from pathlib import Path
 from requests_html import HTMLSession 
 from bs4 import BeautifulSoup as bs # importing BeautifulSoup
 
-# Via: https://github.com/x4nth055/pythoncode-tutorials/blob/master/web-scraping/youtube-extractor/extract_video_info.py
+# Via: https://www.thepythoncode.com/article/get-youtube-data-python
+#      https://github.com/x4nth055/pythoncode-tutorials/blob/master/web-scraping/youtube-extractor/extract_video_info.py
 def get_video_info(url):
     # init session
     session = HTMLSession()
