@@ -26,20 +26,20 @@ def get_video_info(url):
     # download HTML code
     response = session.get(url)
     # execute Javascript
-    response.html.render(sleep=1)
+    response.html.render(timeout=60)
     # create beautiful soup object to parse HTML
     soup = bs(response.html.html, "html.parser")
     # open("index.html", "w").write(response.html.html)
     # initialize the result
     result = {}
     # video title
-    result["title"] = soup.find("h1").text.strip()
-    # video views (converted to integer)
-    result["views"] = int(''.join([ c for c in soup.find("span", attrs={"class": "view-count"}).text if c.isdigit() ]))
+    result["title"] = soup.find("meta", itemprop="name")['content']
+    # video views
+    result["views"] = soup.find("meta", itemprop="interactionCount")['content']
     # video description
-    result["description"] = soup.find("yt-formatted-string", {"class": "content"}).text
+    result["description"] = soup.find("meta", itemprop="description")['content']
     # date published
-    result["date_published"] = soup.find("div", {"id": "date"}).text[1:]
+    result["date_published"] = soup.find("meta", itemprop="datePublished")['content']
     # get the duration of the video
     result["duration"] = soup.find("span", {"class": "ytp-time-duration"}).text
     # get the video tags
@@ -47,7 +47,7 @@ def get_video_info(url):
     # number of likes
     text_yt_formatted_strings = soup.find_all("yt-formatted-string", {"id": "text", "class": "ytd-toggle-button-renderer"})
     result["likes"] = ''.join([ c for c in text_yt_formatted_strings[0].attrs.get("aria-label") if c.isdigit() ])
-    result['likes'] = 0 if result['likes'] == '' else int(result['likes'])
+    result["likes"] = 0 if result['likes'] == '' else int(result['likes'])
     # number of dislikes
     result["dislikes"] = ''.join([ c for c in text_yt_formatted_strings[1].attrs.get("aria-label") if c.isdigit() ])
     result['dislikes'] = 0 if result['dislikes'] == '' else int(result['dislikes'])
@@ -68,13 +68,20 @@ parser = argparse.ArgumentParser(description="Automatically create some basic fi
 parser.add_argument('--youtube-link', '-y', type=str,
                     help='Link to the YouTube video that the blog post is based '
                          'upon, will auto-populate a few fields from here')
+# TODO: Allow this script to work without a YouTube link 
+# #     Ex. Just specifing a post title
 
 args = parser.parse_args()
 
 # Get video ID from YouTube Link (string parsing)
 print("Received YouTube video link: {}".format(args.youtube_link))
 url_parts = urllib.parse.urlparse(args.youtube_link)
-video_id = url_parts.path.rsplit('/', 1)[-1]
+if 'watch' not in url_parts.path:
+    # Ex. 'https://youtu.be/xxxxx'
+    video_id = url_parts.path.rsplit('/', 1)[-1]
+else:
+    # Ex. 'https://www.youtube.com/watch?v=xxxxx'
+    video_id = url_parts.query.replace('v=', '')
 print("Identified the YouTube video ID as: {}".format(video_id))
 
 # Get YouTube video title from video ID
@@ -89,7 +96,7 @@ with urllib.request.urlopen(url) as response:
 
 # Get video's date of publish from HTML
 date_published = get_video_info(params['url'])['date_published']
-date_time_obj = datetime.datetime.strptime(date_published, '%b %d, %Y')
+date_time_obj = datetime.datetime.strptime(date_published, '%Y-%m-%d')
 date_for_folder = date_time_obj.strftime("%Y-%m-%d")    # YYYY-MM-DD
 
 
