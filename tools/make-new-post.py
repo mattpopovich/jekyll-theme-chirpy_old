@@ -81,48 +81,83 @@ if not os.path.exists('make-new-post.py'):
     print("       Please cd to tools/ then run the script from there")
     sys.exit()
 
+# Parse arguments
 parser = argparse.ArgumentParser(description="Automatically create some basic files for a new blog post")
 parser.add_argument('--youtube-link', '-y', type=str,
                     help='Link to the YouTube video that the blog post is based '
                          'upon, will auto-populate a few fields from here')
-# TODO: Allow this script to work without a YouTube link 
-# #     Ex. Just specifing a post title
+parser.add_argument('--title', '-t', type=str,
+                    help="Title of the article if not using a predefined title "
+                         "from YouTube")
 
 args = parser.parse_args()
-# args.youtube_link = 'https://youtu.be/JuFTTGWe_HQ' # tesla swerve
-# args.youtube_link = "https://www.youtube.com/watch?v=Hv6EMd8dlQk" #joma
-args.youtube_link = "https://youtu.be/ALsLiy4sLIQ" #airpods
-# args.youtube_link = "https://www.youtube.com/watch?v=L2Pp3c7fN3E" #853 likes Renee Ritchie
 
-# Get video ID from YouTube Link (string parsing)
-print("Received YouTube video link: {}".format(args.youtube_link))
-url_parts = urllib.parse.urlparse(args.youtube_link)
-if 'watch' not in url_parts.path:
-    # Ex. 'https://youtu.be/xxxxx'
-    video_id = url_parts.path.rsplit('/', 1)[-1]
+# Grab title, dates, and text that should be pre-populated based on the argument
+#   specified
+if not (args.youtube_link or args.title):
+    parser.error("ERROR: You must specify either a '-y' YouTube link or a "
+                                                  "'-t' custom title for the post")
+    sys.exit()  # Probably unnecessary
+
+elif args.youtube_link:
+    # For debugging
+    # args.youtube_link = 'https://youtu.be/JuFTTGWe_HQ' # tesla swerve
+    # args.youtube_link = "https://www.youtube.com/watch?v=Hv6EMd8dlQk" #joma
+    # args.youtube_link = "https://youtu.be/ALsLiy4sLIQ" #airpods
+    # args.youtube_link = "https://www.youtube.com/watch?v=L2Pp3c7fN3E" #853 likes Renee Ritchie
+
+    # Get video ID from YouTube Link (string parsing)
+    print("Received YouTube video link: {}".format(args.youtube_link))
+    url_parts = urllib.parse.urlparse(args.youtube_link)
+    if 'watch' not in url_parts.path:
+        # Ex. 'https://youtu.be/xxxxx'
+        video_id = url_parts.path.rsplit('/', 1)[-1]
+    else:
+        # Ex. 'https://www.youtube.com/watch?v=xxxxx'
+        video_id = url_parts.query.replace('v=', '')
+    print("Identified the YouTube video ID as: {}".format(video_id))
+
+    # Get YouTube video title from video ID
+    params = {"format": "json", "url": "https://www.youtube.com/watch?v=%s" % video_id}
+    url = "https://www.youtube.com/oembed"
+    query_string = urllib.parse.urlencode(params)
+    url = url + "?" + query_string
+
+    with urllib.request.urlopen(url) as response:
+        response_text = response.read()
+        data = json.loads(response_text.decode())
+
+    # Get video's date of publish from HTML
+    date_published = get_video_info(params['url'])['date_published']
+    date_time_obj = datetime.datetime.strptime(date_published, '%Y-%m-%d')
+    date_for_folder = date_time_obj.strftime("%Y-%m-%d")    # YYYY-MM-DD
+
+    title = data['title']
+
+    # Make template post with header
+    with open('post_middle_youtube.txt', 'r') as f:
+        post_middle = f.read()
+
+    with open('post_ending_youtube.txt', 'r') as f:
+        post_ending = f.read()
+
+    finish_post = post_middle + 'https://www.youtube.com/embed/' + video_id + post_ending
+
+elif args.title:
+    title=args.title
+    date_for_folder = datetime.datetime.now().strftime("%Y-%m-%d")  # YYYY-MM-DD
+    with open('post_title.txt', 'r') as f:
+        finish_post = f.read()
+
+    print("Using a custom title for this post: " + title)
+
 else:
-    # Ex. 'https://www.youtube.com/watch?v=xxxxx'
-    video_id = url_parts.query.replace('v=', '')
-print("Identified the YouTube video ID as: {}".format(video_id))
-
-# Get YouTube video title from video ID
-params = {"format": "json", "url": "https://www.youtube.com/watch?v=%s" % video_id}
-url = "https://www.youtube.com/oembed"
-query_string = urllib.parse.urlencode(params)
-url = url + "?" + query_string
-
-with urllib.request.urlopen(url) as response:
-    response_text = response.read()
-    data = json.loads(response_text.decode())
-
-# Get video's date of publish from HTML
-date_published = get_video_info(params['url'])['date_published']
-date_time_obj = datetime.datetime.strptime(date_published, '%Y-%m-%d')
-date_for_folder = date_time_obj.strftime("%Y-%m-%d")    # YYYY-MM-DD
+    print("ERROR: Something funky's going on with the arguments specified")
+    sys.exit()
 
 
+# By this point, title, date_for_folder, and finish_post should all be set
 
-title = data['title']
 title_no_space = title.lower().replace(' ', '-')
 title_for_folder = ''.join(c for c in title_no_space if c.isalnum() or c == '-')
 
@@ -136,14 +171,6 @@ else:
     os.makedirs(folder_path)
     print("Created folder: " + folder_path)
 
-
-# Make template post with header
-with open('post_middle.txt', 'r') as f:
-    post_middle = f.read()
-
-with open('post_ending.txt', 'r') as f:
-    post_ending = f.read()
-
 post_path = '../_posts/' + folder_name + '.md'
 print("Creating text post: " + post_path)
 
@@ -153,14 +180,16 @@ if os.path.exists(post_path):
     print("       Check to ensure that you do not need the text post, then "
                  "delete it and run this script again for the text post to be "
                  "populated with template text")
+    sys.exit()  # Not necessary but safe
 else:
     with open(post_path, 'w') as f:
         f.write('---\n')
         f.write('# See defaults in _config\n')
         f.write('title: "' + title + '"\n')
         f.write('author: Matt Popovich\n')
-        f.write('date: ' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ' -0600\n')
-        f.write(post_middle)
-        f.write('https://www.youtube.com/embed/' + video_id)
-        f.write(post_ending)
+        # -0600 if in summer, -0700 if in winter
+        # TODO: Make this automatic? 
+        f.write('date: ' + date_for_folder + datetime.datetime.now().strftime(" %H:%M:%S") + ' -0700\n')
+        f.write(finish_post)
 
+print("Finished successfully!")
