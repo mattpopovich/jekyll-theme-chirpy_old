@@ -107,7 +107,7 @@ elif args.youtube_link:
     # args.youtube_link = "https://www.youtube.com/watch?v=L2Pp3c7fN3E" #853 likes Renee Ritchie
 
     # Get video ID from YouTube Link (string parsing)
-    print("Received YouTube video link: {}".format(args.youtube_link))
+    print(f"Received YouTube video link: {args.youtube_link}")
     url_parts = urllib.parse.urlparse(args.youtube_link)
     if 'watch' not in url_parts.path:
         # Ex. 'https://youtu.be/xxxxx'
@@ -115,7 +115,7 @@ elif args.youtube_link:
     else:
         # Ex. 'https://www.youtube.com/watch?v=xxxxx'
         video_id = url_parts.query.replace('v=', '')
-    print("Identified the YouTube video ID as: {}".format(video_id))
+    print(f"Identified the YouTube video ID as: {video_id}")
 
     # Get YouTube video title from video ID
     params = {"format": "json", "url": "https://www.youtube.com/watch?v=%s" % video_id}
@@ -184,7 +184,7 @@ if os.path.exists(post_path):
 else:
     with open(post_path, 'w') as f:
         f.write('---\n')
-        f.write('# See defaults in _config\n')
+        f.write('# See defaults in _config.yml\n')
         f.write('title: "' + title + '"\n')
         f.write('author: Matt Popovich\n')
         # -0600 if in summer, -0700 if in winter
