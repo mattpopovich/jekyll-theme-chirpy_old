@@ -28,7 +28,7 @@ You can basically follow [these instructions](https://support.logmeininc.com/las
   * Empty the trash
 * Go to the LastPass [downloads page](https://lastpass.com/misc_download2.php)
 * Click "Download" next to "LastPass for Safari"
-  * I do not know why they offer a different download for "LastPass Mac App". It downloads the same thing as "LastPass for Safari" as of Aug. 17, 2021. 
+  * I do not know why they offer a different download for "LastPass Mac App". It downloads the same thing as "LastPass for Safari" as of May 15, 2022. 
 * Follow whatever prompts necessary to open, mount, and install the LastPass app. 
 * It first installs the LastPass for Mac App. Once you open that up, it will prompt you to then install the LastPass browser extension for Safari. 
   * It will also ask you for "full keyboard access"... Which is [not necessary in my opinion](https://support.logmeininc.com/lastpass/help/why-do-i-nbsp-see-a-message-that-lastpassapp-would-like-to-receive-keystrokes-from-any-application-and-should-i-nbsp-allow-it) (weird that they even have a feature that would ask) and I did not enable it. 
@@ -39,5 +39,5 @@ You can basically follow [these instructions](https://support.logmeininc.com/las
     * Reboot your Mac 
 
 ## My Issue
-My issues was that I attempted to install Lastpass via the Mac App Store (it has a 2.6/5 rating for a reason). After installing it, it did not prompt me to install the Safari extension.  Uninstalling it and installing the [direct download from LastPass](https://lastpass.com/misc_download2.php) worked for me. 
+My issues was that I attempted to install [Lastpass via the Mac App Store](https://apps.apple.com/us/app/lastpass/id926036361) (it has a 2.6/5 rating for a reason). After installing it, it did not prompt me to install the Safari extension.  Uninstalling it and installing the [direct download from LastPass](https://lastpass.com/misc_download2.php) worked for me. 
 
