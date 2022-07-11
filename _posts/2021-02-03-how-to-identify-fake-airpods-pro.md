@@ -28,6 +28,12 @@ Oh! Happy St. Patrick's Day, and, happy Tie Tuesday 👔
 
 (Ok, yes, I know.. It's not St. Patrick's Day and it's not even Tuesday. But, I first recorded this on St. Patrick's Day 2020 *which* fell on a Tuesday. So... better late than never? Moving on!)
 
+## Avoid this by Buying Directly from a Reputable Seller
+You can be confident that you are buying genuine AirPods Pro if you buy from a reputable seller. I'd recommend buying [directly from Apple ($250)](https://www.apple.com/shop/product/MLWK3AM/A/airpods-pro) or, to get the best price, [buy from Amazon ($199)](https://amzn.to/3ynaBva). If you buy from Amazon, make sure that the seller you select is both "Ships from Amazon.com" and "Sold by Amazon.com":
+
+[![Look on the right side of the checkout, below "Buy Now" to see who the item is sold and shipped by](/assets/img/posts/2021-02-03-how-to-identify-fake-airpods-pro/buying-from-amazon.png)](https://amzn.to/3ynaBva)
+*Buy from Amazon only if it is both shipped and sold by Amazon.com*
+
 ## Visual Check
 Getting down to business, there are three quick ways to check if you have genuine AirPods Pros. The easiest is to just **take off the ear tips and see if you see a black oval** speaker looking thing. That contains an inward facing microphone for more advanced noise cancellation. 
 
@@ -53,7 +59,7 @@ If you enter that menu, you'll see detailed information about your 'Pros.
 ![Serial number in Settings app](/assets/img/posts/2021-02-03-how-to-identify-fake-airpods-pro/serial-number-settings-app.jpg){: width="360"} *Serial number in Settings app (censored for privacy)*
 
 ## Serial Number Check
-The last quick check is to *validate that serial number*. Act like you're at the club on a Friday night and get those digits! (Sorry) You can find them either in the settings app as mentioned [above](#bluetooth-check) (in Settings -> General -> About -> special little menu below "EID"), or you can get them from the top of the inside of the AirPods case, or from the outside of the box (unrelated, but, this is where you should be doing most of your thinking 😉). 
+The last quick check is to *validate that serial number*. Act like you're at the club on a Friday night and get those digits! (Sorry) You can find them either in the settings app as mentioned [above](#bluetooth-check) (in Settings -> General -> About -> special little menu below "EID"), or you can get them from the top of the inside of the AirPods case, or from the outside of the box (unrelated, but, this is where you should be doing [most of your thinking](https://en.wikipedia.org/wiki/Thinking_outside_the_box) 😉).
 
 Settings App               |  Top of Inside of Case    | Outside of the Box       |
 :-------------------------:|:-------------------------:|:-------------------------:

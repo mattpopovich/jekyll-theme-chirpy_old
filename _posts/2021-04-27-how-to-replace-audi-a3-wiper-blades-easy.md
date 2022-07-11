@@ -21,7 +21,7 @@ allowfullscreen></iframe>
 ## Intro
 Quick post on how to replace the wipers in your Audi A3. The A3 owner's manual states that you should replace your windshield wiper blades [once or twice every year](https://ownersmanuals2.com/audi/a3-sedan-s3-sedan-2015-owners-manual-71870/page-52). It’s very easy to do and only takes a few minutes. I didn’t see a great tutorial on YouTube so I decided to make my own!
 
-While I wrote this specifically for a [2015 Audi A3 8V](https://en.wikipedia.org/wiki/Audi_A3#Third_generation_(Typ_8V;_2013)), [these wipers (affiliate link)](https://amzn.to/3pIypq5) will also fit on: 
+While I wrote this specifically for a [2015 Audi A3 8V](https://en.wikipedia.org/wiki/Audi_A3#Third_generation_(Typ_8V;_2013)), [these wipers (affiliate link)](https://amzn.to/3PfCE6p) will also fit on:
 
 [![Warning from the owner's manual to replace wiper blades once to twice a year](/assets/img/posts/2021-04-27-how-to-replace-audi-a3-wiper-blades-easy/wiper-blade-replacement-interval.png){: width="400" .right}](https://ownersmanuals2.com/audi/a3-sedan-s3-sedan-2015-owners-manual-71870/page-52)
 
@@ -42,7 +42,7 @@ While I wrote this specifically for a [2015 Audi A3 8V](https://en.wikipedia.org
 ## [TL;DR](https://www.merriam-webster.com/dictionary/TL%3BDR)
 1. Buy replacement wipers (Bosch Aerotwin A102S’s):
   - [FCP Euro ($24 + shipping)](https://www.fcpeuro.com/products/audi-vw-wiper-blade-set-bosch-8v1998002a)
-  - [Amazon $38 (affiliate link)](https://amzn.to/3pIypq5)
+  - [Amazon $38 (affiliate link)](https://amzn.to/3PfCE6p)
 1. Put the wipers into “service position”
   - Push the wiper stalk (right of steering wheel) down and hold. Might have to turn the ignition on and then off to "wake up" the car for this to work
 1. Take the old wipers off
@@ -52,7 +52,7 @@ While I wrote this specifically for a [2015 Audi A3 8V](https://en.wikipedia.org
 1. Push down on the wiper stalk to take them out of "service position"
 
 ## Buy replacement wipers
-I used the Bosch Aerotwin A102S's. I got mine from FCP Euro for [$24 + shipping](https://www.fcpeuro.com/products/audi-vw-wiper-blade-set-bosch-8v1998002a). I ordered a few other things (cabin and engine air filters - additional post on those coming soon!) as they have free shipping for orders >$49. You can also find these wipers on Amazon for [$38 (affiliate link)](https://amzn.to/3pIypq5). You might even be able to use something else that has the same size: 19"/475mm passenger wipers and 26"/650mm driver side wipers. 
+I used the Bosch Aerotwin A102S's. I got mine from FCP Euro for [$24 + shipping](https://www.fcpeuro.com/products/audi-vw-wiper-blade-set-bosch-8v1998002a). I ordered a few other things (cabin and engine air filters - additional post on those coming soon!) as they have free shipping for orders >$49. You can also find these wipers on Amazon for [$38 (affiliate link)](https://amzn.to/3PfCE6p). You might even be able to use something else that has the same size: 19"/475mm passenger wipers and 26"/650mm driver side wipers. 
 
 [![Audi A3 manual instructions to put the wipers in service position](/assets/img/posts/2021-04-27-how-to-replace-audi-a3-wiper-blades-easy/windshield-wiper-service-position.jpg){: width="400" .right}](https://ownersmanuals2.com/audi/a3-sedan-s3-sedan-2015-owners-manual-71870/page-52)
 

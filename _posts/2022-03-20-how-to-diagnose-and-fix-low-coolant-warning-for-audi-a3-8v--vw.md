@@ -34,7 +34,7 @@ Hey guys! Matt Popovich here. Today in my [series of Audi A3 tutorials](/tags/au
 
 ## First steps: can you keep driving?
 
-![Audi A3 8V Dash Engine Temperature Gauge](/assets/img/posts/2022-03-20-how-to-diagnose-and-fix-low-coolant-warning-for-audi-a3-8v--vw/engine-temperature-gauge.jpg){: width="400"} *Location of Engine Temperature Gauge (Highlighted)*
+![Audi A3 8V Dash Engine Temperature Gauge](/assets/img/posts/2022-03-20-how-to-diagnose-and-fix-low-coolant-warning-for-audi-a3-8v--vw/engine-temperature-gauge.jpg){: width="600"} *Location of Engine Temperature Gauge (Highlighted)*
 
 The first thing you’re going to want to do is to keep an eye on your engine temperature gauge (the location for a S3/RS3 is different, watch [this video](https://www.youtube.com/watch?v=jSTC5FCfJdA) for how to find it, and watch [this video](https://www.youtube.com/watch?v=--jgt7jy-xo) for how to modify the car’s settings via [OBD2](https://en.wikipedia.org/wiki/On-board_diagnostics) to add engine oil temperature to the instrument cluster). Coolant has two functions: it keeps the engine from overheating and it protects the engine from freezing in the winter. I just started my car after it was sitting for a ~day so the engine is cold. After a few minutes, the engine temperature will creep back up to the normal level, which is where it should be while you are driving. It’s "okay" to keep driving with the low coolant light on as long as your engine stays at normal operating temperature. You’ll need to keep an eye on it. Ideally, you’ll want to check the physical, liquid coolant level as soon as you can for some additional peace of mind. If the car doesn’t get to normal operating temperature or if it goes past the midpoint line, that’s a bad sign and you should pull over, open the hood and check the coolant level in the coolant reservoir. Let me show you how to do that now. 
 
@@ -78,7 +78,7 @@ When you mix it, you don’t have to go full Bill Nye with it to make sure it’
 
 Distilled water can be bought from anywhere such as grocery stores.
 
-* [128oz from Amazon ~$2](https://www.amazon.com/365-Everyday-Value-Distilled-Water/dp/B074J5L82H/)
+* [128oz from Amazon ~$2 (affiliate link)](https://amzn.to/3RnV4E5)
 
 ## Adding coolant
 

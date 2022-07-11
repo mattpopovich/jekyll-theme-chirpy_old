@@ -33,6 +33,15 @@ After parking too far away from the American flag and having spotty connection (
 
 I'm fairly pleased with how it all turned out! 🎆
 
+**Filmed via:**
+[DJI Mavic Air 2 (affiliate link)](https://amzn.to/3uyCyiz) <small>(newer model: [Mavic Air 2S](https://amzn.to/3yvv7d1))</small>:
+* 4K
+* [HEVC](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding)
+* 24 fps
+  * Less fps (frames per second) means more light can get into each frame
+  * In other words, the longer you can keep your shutter open, the brighter your images will be
+* 100 Mbit/s
+
 <!-- TODO: Link to video explaining how I lost my drone -->
 
 ### Audio
