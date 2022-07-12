@@ -1,5 +1,5 @@
 # Quick little script for creating a new post
-#   It will create a new post in _posts/, auto-populate it with some basic 
+#   It will create a new post in _posts/, auto-populate it with some basic
 #   text, and create a folder in assets/img/posts/
 # TOOD: Clean up this mess
 
@@ -16,7 +16,7 @@ import sys              # To exit script on error
 from pathlib import Path
 
 # For getting html file and parsing it
-from requests_html import HTMLSession 
+from requests_html import HTMLSession
 from bs4 import BeautifulSoup as bs # importing BeautifulSoup
 
 # Via: https://www.thepythoncode.com/article/get-youtube-data-python
@@ -57,10 +57,10 @@ def get_video_info(url):
     likes_str = likes_label.split(' ')[0].replace(',','')
     result["likes"] = '0' if likes_str == 'No' else likes_str
     # number of dislikes - YouTube does not publish this anymore...?
-    # result["dislikes"] = ''.join([ c for c in text_yt_formatted_strings[1].attrs.get("aria-label") if c.isdigit() ])	
+    # result["dislikes"] = ''.join([ c for c in text_yt_formatted_strings[1].attrs.get("aria-label") if c.isdigit() ])
     # result["dislikes"] = '0' if result['dislikes'] == '' else result['dislikes']
     result['dislikes'] = 'UNKNOWN'
-    
+
     # channel details
     channel_tag = soup.find("meta", itemprop="channelId")['content']
     # channel name
@@ -165,7 +165,7 @@ folder_name = date_for_folder + '-' + title_for_folder
 folder_path = '../assets/img/posts/' + folder_name
 
 # Create folder for images
-if os.path.exists(folder_path): 
+if os.path.exists(folder_path):
     print("WARNING: folder path was already created: " + folder_path)
 else:
     os.makedirs(folder_path)
@@ -188,7 +188,7 @@ else:
         f.write('title: "' + title + '"\n')
         f.write('author: Matt Popovich\n')
         # -0600 if in summer, -0700 if in winter
-        # TODO: Make this automatic? 
+        # TODO: Make this automatic?
         f.write('date: ' + date_for_folder + datetime.datetime.now().strftime(" %H:%M:%S") + ' -0700\n')
         f.write(finish_post)
 
