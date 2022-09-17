@@ -12,7 +12,7 @@ pin: false
 # UPDATE:
 ⚠️ There is an easier way to do this!! ⚠️
 
-Please see my updated blog post [here](posts/updated-how-to-install-the-resynthesizer-plugin-for-gimp-on-mac-2022/) for the details!
+Please see my updated blog post [here](/posts/updated-how-to-install-the-resynthesizer-plugin-for-gimp-on-mac-2022/) for the details!
 
 Below is the old method...
 
