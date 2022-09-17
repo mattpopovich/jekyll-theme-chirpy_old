@@ -82,7 +82,7 @@ error: procedure not found
 In computer terms, the plugin is looking to use a library that we do not have: `libintl.9`. I don't know how to get that *exact* version of the library, but we can easily get `libintl.8`, tell the plugin to use that version and carry on our merry way.
 
 ## Checking for `libintl`
-To check if you already have `libintl.8` installed, open *Terminal*, go to the `/usr/local/lib` directory via `cd /usr/local/lib`, and try to list all files named "libintl" via `ls libintl*`. If it outputs `libintl.8` or even `libintl.9`, then move onto the [symbolic link portion of this article](#creating-symbolic-link-to-fake-having-libintl9). If it outputs "No such file or directory", then we will need to install it.
+To check if you already have `libintl.8` installed, open *Terminal*, go to the `/usr/local/lib` directory via `cd /usr/local/lib`, and try to list all files named "libintl" via `ls libintl*`. If it outputs `libintl.8` or even `libintl.9`, then move onto the [symbolic link portion of this article](#creating-a-symbolic-link-to-fake-having-libintl9). If it outputs "No such file or directory", then we will need to install it.
 ```console
 username@Mac:~$ cd /usr/local/lib
 username@Mac:/usr/local/lib$ ls libintl*
