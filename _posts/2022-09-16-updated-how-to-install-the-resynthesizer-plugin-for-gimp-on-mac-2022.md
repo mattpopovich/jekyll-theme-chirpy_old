@@ -9,7 +9,13 @@ layout: post
 pin: false
 ---
 
-<!-- TODO: Add link to YouTube video here -->
+<div style="text-align:center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/iU4HRAkZ1-U"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+</div>
 
 # Intro
 Ok folks, welcome back! This is a long overdue update to the [Resynthesizer Plugin installation tutorial for Mac](/posts/how-to-install-the-resynthesizer-plugin-for-gimp-on-mac-2021/) that I posted about a year and a half ago. I apologize for everyone that jumped through all those hoops to install the plugin. At the time, that was the only way I knew how to make it work. It did work for many, but for some, they got lost along the way and didn’t have the same success.
@@ -28,8 +34,8 @@ Before we get started, I want to give a shoutout to Philip Brown. He sent me an 
 1. Download and install [GIMP](https://www.gimp.org/downloads/)
 1. Download the Resynthesizer plugin for Mac: [ResynthesizerPlugin-Gimp-2.10-osx.tgz
 ](https://github.com/aferrero2707/gimp-plugins-collection/releases/download/continuous/ResynthesizerPlugin-Gimp-2.10-osx.tgz)
-1. Extract the plugin and copy its contents to `/Applications/GIMP-2.10.app/Contents/Resources/lib/gimp/2.0/plug-ins`
-1. Try to run it on an image (Filters --> Enhance --> "Heal selection...").
+1. Extract the `.tgz` plugin and copy the contents in the `ResynthesizerPlugin-Gimp-2.10-osx` folder to `/Applications/GIMP-2.10.app/Contents/Resources/lib/gimp/2.0/plug-ins`
+1. Try to run the Resynthesizer plugin on an image (Filters --> Enhance --> "Heal selection...") in GIMP.
   * If it works, you're good to go! If not, continue
 1. Change directories to GIMP's library folder
   * `cd /Applications/GIMP-2.10.app/Contents/Resources/lib`
