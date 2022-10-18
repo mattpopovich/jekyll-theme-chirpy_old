@@ -4,7 +4,7 @@ title: "UPDATED: How to install the Resynthesizer plugin for GIMP on Mac (2022)"
 author: Matt Popovich
 date: 2022-09-16 22:27:19 -0700
 categories: [Blog, YouTube] # <=2 values here: top category and sub category
-tags: [youtube, linux, ubuntu, GIMP, tech, tutorial, how to]       # TAG names should always be lowercase
+tags: [youtube, linux, ubuntu, GIMP, tech, tutorial, how to, apple, catalina, big sur, monterey, osx, mac, update]       # TAG names should always be lowercase
 layout: post
 pin: false
 ---
@@ -26,7 +26,7 @@ I have verified that this updated fix works with:
 * Intel Mac Catalina (10.15.7)
 * M1 Mac Big Sur (11.6.8)
 * Intel Mac Big Sur (11.7)
-* M1 Mac Monterey (12.6)    <!-- TODO -->
+* M1 Mac Monterey (12.6)
 
 Before we get started, I want to give a shoutout to Philip Brown. He sent me an email after he read my [previous blog post on how to install the Resynthesizer Plugin](/posts/how-to-install-the-resynthesizer-plugin-for-gimp-on-mac-2021/). He’s the one that introduced me to this easier method and I’d like to thank him for that. It’s great to see the community help each other out like this and it’s just something you love to see.
 
@@ -128,7 +128,7 @@ That's it! Thanks again to Philip Brown for the tip.
 If you have any questions or suggestions, feel free to comment in Disqus below.
 
 
-<!-- TOOD: Add music here -->
+<!-- TODO: Could not find music for "Ou est l'amore (Instrumental)" by Piscines -->
 
 
 

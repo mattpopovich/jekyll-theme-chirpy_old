@@ -1,10 +1,10 @@
 ---
-# See defaults in _config
+# See defaults in _config.yml
 title: "How to Install the Safari LastPass Extension for Mac"
 author: Matt Popovich
 date: 2021-08-16 22:30:33 -0600
 categories: [Blog] # <=2 values here: top category and sub category
-tags: [apple, big sur, osx, how to, tech, tutorial]       # TAG names should always be lowercase
+tags: [apple, big sur, osx, mac, how to, tech, tutorial, not youtube]       # TAG names should always be lowercase
 layout: post
 pin: false
 ---

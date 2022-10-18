@@ -1,10 +1,10 @@
 ---
-# See defaults in _config
+# See defaults in _config.yml
 title: New Favicon
 author: Matt Popovich
 date: 2020-10-06 23:29:11 -0600
 categories: [Blog] # <=2 values here: top category and sub category
-tags: [spam]     # TAG names should always be lowercase
+tags: [spam, not youtube]     # TAG names should always be lowercase
 layout: post
 ---
 
