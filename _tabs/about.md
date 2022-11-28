@@ -1,6 +1,6 @@
 ---
-title: About
-icon: fas fa-info
+# the default layout is 'page'
+icon: fas fa-info-circle
 order: 4
 ---
 
@@ -15,3 +15,8 @@ Don't be afraid to [reach out](javascript:window.open('mailto:' + ['contact','ma
 Take your coat off, stay a while. 
 
 Thanks for visiting!
+
+<!--
+> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+{: .prompt-tip }
+-->
