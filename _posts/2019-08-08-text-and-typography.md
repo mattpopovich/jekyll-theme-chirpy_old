@@ -1,13 +1,16 @@
 ---
 title: Text and Typography
-author: Cotes Chung
+author: cotes
 date: 2019-08-08 11:33:00 +0800
 categories: [Blogging, Demo]
 tags: [typography]
 math: true
 mermaid: true
 image:
-  src: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/devices-mockup.png
+  path: /commons/devices-mockup.png
+  width: 800
+  height: 500
+  alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
 This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
@@ -27,17 +30,7 @@ This post is to show Markdown syntax rendering on [**Chirpy**](https://github.co
 
 ## Paragraph
 
-I wandered lonely as a cloud
-
-That floats on high o'er vales and hills,
-
-When all at once I saw a crowd,
-
-A host, of golden daffodils;
-
-Beside the lake, beneath the trees,
-
-Fluttering and dancing in the breeze.
+Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas interdum malesuada egestas. Duis consectetur porta risus, sit amet vulputate urna facilisis ac. Phasellus semper dui non purus ultrices sodales. Aliquam ante lorem, ornare a feugiat ac, finibus nec mauris. Vivamus ut tristique nisi. Sed vel leo vulputate, efficitur risus non, posuere mi. Nullam tincidunt bibendum rutrum. Proin commodo ornare sapien. Vivamus interdum diam sed sapien blandit, sit amet aliquam risus mattis. Nullam arcu turpis, mollis quis laoreet at, placerat id nibh. Suspendisse venenatis eros eros.
 
 ## Lists
 
@@ -50,18 +43,15 @@ Fluttering and dancing in the breeze.
 ### Unordered list
 
 - Chapter
-	- Setcion
-      - Paragraph
+  + Section
+    * Paragraph
 
-### Task list
+### ToDo list
 
-- [ ] TODO
-- [x] Completed
-- Hold on
-- [ ] Defeat COVID-19
-  - [x] Vaccine production
-  - [ ] Economic recovery
-  - [ ] People smile again
+- [ ] Job
+  + [x] Step 1
+  + [x] Step 2
+  + [ ] Step 3
 
 ### Description list
 
@@ -71,10 +61,23 @@ Sun
 Moon
 : the natural satellite of the earth, visible by reflected light from the sun
 
-
 ## Block Quote
 
-> This line to shows the Block Quote.
+> This line shows the _block quote_.
+
+## Prompts
+
+> An example showing the `tip` type prompt.
+{: .prompt-tip }
+
+> An example showing the `info` type prompt.
+{: .prompt-info }
+
+> An example showing the `warning` type prompt.
+{: .prompt-warning }
+
+> An example showing the `danger` type prompt.
+{: .prompt-danger }
 
 ## Tables
 
@@ -88,47 +91,39 @@ Moon
 
 <http://127.0.0.1:4000>
 
-
 ## Footnote
 
 Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
-
 
 ## Images
 
 - Default (with caption)
 
-![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png)
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" }
 _Full screen width and center alignment_
 
 <br>
 
-- Specify width
+- Shadow
 
-![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png){: width="400"}
-_400px image width_
+![Window shadow](/posts/20190808/window.png){: .shadow width="1548" height="864" .w-75 }
+_shadow effect (visible in light mode)_
 
 <br>
 
 - Left aligned
 
-![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png){: width="350" .normal}
-
-<br>
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-75 .normal}
 
 - Float to left
 
-  ![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png){: width="240" .left}
-  "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
-
-<br>
+  ![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .left}
+  Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum. Phasellus a tortor aliquam, tristique felis sit amet, elementum enim. Integer vestibulum vitae nulla nec pretium.
 
 - Float to right
 
-  ![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png){: width="240" .right}
-  "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
-
-<br>
+  ![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .right}
+  Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum. Phasellus a tortor aliquam, tristique felis sit amet, elementum enim. Integer vestibulum vitae nulla nec pretium.
 
 ## Mermaid SVG
 
@@ -140,7 +135,6 @@ _400px image width_
   cherry :active, c, after b a, 1d
 ```
 
-
 ## Mathematics
 
 The mathematics powered by [**MathJax**](https://www.mathjax.org/):
@@ -151,11 +145,13 @@ When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
 
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
-
 ## Inline code
 
 This is an example of `Inline Code`.
 
+## Filepath
+
+Here is the `/path/to/the/file.extend`{: .filepath}.
 
 ## Code block
 
@@ -175,44 +171,23 @@ SHELL=/usr/local/bin/bash
 PYENV_SHELL=bash
 ```
 
-#### Ruby
-
-```ruby
-def sum_eq_n?(arr, n)
-  return true if arr.empty? && n == 0
-  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
-end
-```
-
 #### Shell
 
-```shell
+```bash
 if [ $? -ne 0 ]; then
     echo "The command was not successful.";
     #do the needful / exit
 fi;
 ```
 
-#### Liquid
+### Specific filename
 
-{% raw %}
-```liquid
-{% if product.title contains 'Pack' %}
-  This product's title contains the word Pack.
-{% endif %}
+```sass
+@import
+  "colors/light-typography",
+  "colors/dark-typography"
 ```
-{% endraw %}
-
-#### Java
-
-```java
-private void writeObject(java.io.ObjectOutputStream s)
-  throws java.io.IOException {
-  // Write out any hidden serialization magic
-  s.defaultWriteObject();
-  for (E e: map.keySet()) s.writeObject(e);
-}
-```
+{: file='_sass/jekyll-theme-chirpy.scss'}
 
 ## Reverse Footnote
 
