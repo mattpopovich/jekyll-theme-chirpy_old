@@ -1,10 +1,9 @@
 ---
-# See defaults in _config
 title: "Earth2: Scam or the Next Bitcoin? My Research..."
-author: Matt Popovich
+author: matt_popovich             # Reference author_id in _data/authors.yml
 date: 2021-01-15 02:01:22 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
-tags: [youtube, scam, earth2.io]     # TAG names should always be lowercase
+categories: [Blog, YouTube]       # <=2 values here: top category and sub category
+tags: [youtube, scam, earth2.io]  # TAG names should always be lowercase
 layout: post
 pin: false
 ---

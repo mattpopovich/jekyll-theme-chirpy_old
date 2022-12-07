@@ -1,6 +1,6 @@
-categories: [Blog, TODO] # <=2 values here: top category and sub category
-tags: [todo]       # TAG names should always be lowercase
-layout: post
+categories: [Blog, TODO]    # <=2 values here: top category and sub category
+tags: [todo]                # TAG names should always be lowercase
+layout: post                # post is the default, we will set it to be explicit
 pin: false
 ---
 

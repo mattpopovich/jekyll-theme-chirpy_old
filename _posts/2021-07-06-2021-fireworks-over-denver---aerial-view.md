@@ -1,10 +1,9 @@
 ---
-# See defaults in _config
 title: "2021 Fireworks Over Denver - Aerial View"
-author: Matt Popovich
+author: matt_popovich               # Reference author_id in _data/authors.yml
 date: 2021-07-18 22:30:30 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
-tags: [youtube, drone, photography]       # TAG names should always be lowercase
+categories: [Blog, YouTube]         # <=2 values here: top category and sub category
+tags: [youtube, drone, photography] # TAG names should always be lowercase
 layout: post
 pin: false
 ---

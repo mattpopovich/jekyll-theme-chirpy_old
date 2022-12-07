@@ -1,10 +1,9 @@
 ---
-# See defaults in _config.yml
 title: New Favicon
-author: Matt Popovich
+author: matt_popovich       # Reference author_id in _data/authors.yml
 date: 2020-10-06 23:29:11 -0600
-categories: [Blog] # <=2 values here: top category and sub category
-tags: [spam, not youtube]     # TAG names should always be lowercase
+categories: [Blog]          # <=2 values here: top category and sub category
+tags: [spam, not youtube]   # TAG names should always be lowercase
 layout: post
 ---
 

@@ -1,9 +1,8 @@
 ---
-# See defaults in _config
 title: "Steamboat Gondola Line Feb. 13, 2021"
-author: Matt Popovich
+author: matt_popovich           # Reference author_id in _data/authors.yml
 date: 2021-02-13 09:22:07 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
+categories: [Blog, YouTube]     # <=2 values here: top category and sub category
 tags: [youtube, ski, snowboard, steamboat springs]     # TAG names should always be lowercase
 layout: post
 pin: false

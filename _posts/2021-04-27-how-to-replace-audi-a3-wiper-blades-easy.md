@@ -1,9 +1,8 @@
 ---
-# See defaults in _config
 title: "How to Replace Audi A3 Wiper Blades (Easy!)"
-author: Matt Popovich
+author: matt_popovich         # Reference author_id in _data/authors.yml
 date: 2021-04-28 00:17:48 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
+categories: [Blog, YouTube]   # <=2 values here: top category and sub category
 tags: [youtube, audi, audi a3 8v, how to, tutorial]       # TAG names should always be lowercase
 layout: post
 pin: false

@@ -1,9 +1,8 @@
 ---
-# See defaults in _config
 title: "How to Identify Fake AirPods Pro"
-author: Matt Popovich
+author: matt_popovich           # Reference author_id in _data/authors.yml
 date: 2021-02-03 03:43:06 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
+categories: [Blog, YouTube]     # <=2 values here: top category and sub category
 tags: [youtube, tech, apple, airpods, airpods pro, tie tuesday, scam, fake]     # TAG names should always be lowercase
 layout: post
 pin: false
