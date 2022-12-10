@@ -2,6 +2,17 @@ categories: [Blog, YouTube] # <=2 values here: top category and sub category
 tags: [youtube, todo]       # TAG names should always be lowercase
 layout: post
 pin: false
+toc: true                   # Table of contents
+comments: true              # Enable/disable comments at the bottom of the post
+math: false                 # Disabled by default for performance reasons
+mermaid: false              # Diagram generation tool via ```mermaid [...]```
+#img_cdn: https://cdn.com
+#img_path: /img/path/
+#image:
+#  path: /path/to/image.jpg
+#  width: 100   # in pixels
+#  height: 40   # in pixels
+#  alt: image alternative text
 ---
 
 <div style="text-align:center">

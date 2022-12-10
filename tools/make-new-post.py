@@ -186,7 +186,7 @@ else:
         f.write('---\n')
         f.write('title: "' + title + '"\n')
         f.write('author: matt_popovich           # Reference author_id in _data/authors.yml\n')
-        f.write('# Can also use `authors: [<author1_id>, <author2_id>]`')
+        f.write('# Can also use `authors: [<author1_id>, <author2_id>]` for multiple entries')
         # -0600 if in summer, -0700 if in winter
         # TODO: Make this automatic?
         f.write('date: ' + date_for_folder + datetime.datetime.now().strftime(" %H:%M:%S") + ' -0700\n')

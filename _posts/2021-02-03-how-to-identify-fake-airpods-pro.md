@@ -19,7 +19,7 @@ allowfullscreen></iframe>
 **Top o' the mornin'!**
 
 ## Intro
-![Tie Tuesday!](/assets/img/posts/2021-02-03-how-to-identify-fake-airpods-pro/tie-tuesday.jpg){: width="240" .right}
+![Tie Tuesday!](/assets/img/posts/2021-02-03-how-to-identify-fake-airpods-pro/tie-tuesday.jpg){: width="240" .right .shadow}
 
 Wanted to make a quick post on how to identify fake vs. real AirPods Pro. I ended up buying some fake ones off of [Craigslist](https://craigslist.org), and want to avoid others from doing the same. Let's jump right into it.
 
