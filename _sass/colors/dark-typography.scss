@@ -2,7 +2,7 @@
  * The main dark mode styles
  */
 
-@mixin dark-scheme {
+ @mixin dark-scheme {
   /* Framework color */
   --body-bg: var(--main-bg);
   --mask-bg: rgb(68, 69, 70);
@@ -124,11 +124,13 @@
     .card-header {
       background-color: var(--card-header-bg);
     }
+
     .list-group-item {
       border-left: none;
       border-right: none;
       padding-left: 2rem;
       border-color: var(--categories-border);
+
       &:last-child {
         border-bottom-color: var(--card-bg);
       }

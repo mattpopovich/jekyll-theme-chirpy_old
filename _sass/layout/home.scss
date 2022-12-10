@@ -44,6 +44,7 @@
         background-color: var(--button-bg);
       }
     }
+
     &:first-child .page-link,
     &:last-child .page-link {
       border-radius: 50%;
@@ -100,6 +101,7 @@
       margin-top: 0.6rem;
       margin-bottom: 0.6rem;
       color: var(--post-list-text-color);
+
       > p {
         /* Make preview shorter on the homepage */
         margin: 0;
