@@ -1,10 +1,9 @@
 ---
-# See defaults in _config
 title: Empty Kelly Park
-author: Matt Popovich
+author: matt_popovich           # Reference author_id in _data/authors.yml
 date: 2020-12-31 19:10:00 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
-tags: [youtube, drone]     # TAG names should always be lowercase.
+categories: [Blog, YouTube]     # <=2 values here: top category and sub category
+tags: [youtube, drone]          # TAG names should always be lowercase.
 layout: post
 pin: false
 toc: false

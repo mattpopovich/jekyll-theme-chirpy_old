@@ -1,9 +1,8 @@
 ---
-# See defaults in _config.yml
 title: "How to Diagnose and Fix Low Coolant Warning for Audi (A3 8V) / VW"
-author: Matt Popovich
+author: matt_popovich         # Reference author_id in _data/authors.yml
 date: 2022-03-20 17:00:48 -0700
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
+categories: [Blog, YouTube]   # <=2 values here: top category and sub category
 tags: [youtube, audi, audi a3 8v, how to, tutorial]       # TAG names should always be lowercase
 layout: post
 pin: false

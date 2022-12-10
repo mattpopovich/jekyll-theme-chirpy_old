@@ -1,9 +1,8 @@
 ---
-# See defaults in _config
 title: "How to Identify Fake AirPods Pro"
-author: Matt Popovich
+author: matt_popovich           # Reference author_id in _data/authors.yml
 date: 2021-02-03 03:43:06 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
+categories: [Blog, YouTube]     # <=2 values here: top category and sub category
 tags: [youtube, tech, apple, airpods, airpods pro, tie tuesday, scam, fake]     # TAG names should always be lowercase
 layout: post
 pin: false
@@ -20,7 +19,7 @@ allowfullscreen></iframe>
 **Top o' the mornin'!**
 
 ## Intro
-![Tie Tuesday!](/assets/img/posts/2021-02-03-how-to-identify-fake-airpods-pro/tie-tuesday.jpg){: width="240" .right}
+![Tie Tuesday!](/assets/img/posts/2021-02-03-how-to-identify-fake-airpods-pro/tie-tuesday.jpg){: width="240" .right .shadow}
 
 Wanted to make a quick post on how to identify fake vs. real AirPods Pro. I ended up buying some fake ones off of [Craigslist](https://craigslist.org), and want to avoid others from doing the same. Let's jump right into it.
 

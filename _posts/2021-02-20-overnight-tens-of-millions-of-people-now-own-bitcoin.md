@@ -1,9 +1,8 @@
 ---
-# See defaults in _config
 title: "Overnight, tens of millions of people now own bitcoin!"
-author: Matt Popovich
+author: matt_popovich           # Reference author_id in _data/authors.yml
 date: 2021-02-20 12:06:08 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
+categories: [Blog, YouTube]     # <=2 values here: top category and sub category
 tags: [youtube, tech, tesla, bitcoin, finance]     # TAG names should always be lowercase
 layout: post
 pin: false

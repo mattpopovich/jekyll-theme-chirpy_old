@@ -1,10 +1,9 @@
 ---
-# See defaults in _config
 title: "[Preview] WowGo 2S Range Test"
-author: Matt Popovich
+author: matt_popovich         # Reference author_id in _data/authors.yml
 date: 2020-12-01 16:51:00 -0600
-categories: [Blog, YouTube] # <=2 values here: top category and sub category
-tags: [youtube, preview, electric skateboard, wowgo, 2s]     # TAG names should always be lowercase.
+categories: [Blog, YouTube]   # <=2 values here: top category and sub category
+tags: [youtube, preview, electric skateboard, wowgo, 2s]  # TAG names should always be lowercase.
 layout: post
 pin: false
 ---
