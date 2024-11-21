@@ -1,32 +1,35 @@
 ---
 title: Text and Typography
+description: Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.
 author: cotes
 date: 2019-08-08 11:33:00 +0800
 categories: [Blogging, Demo]
 tags: [typography]
+pin: true
 math: true
 mermaid: true
 image:
   path: /commons/devices-mockup.png
-  width: 800
-  height: 500
+  lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
+## Headings
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+# H1 — heading
+{: .mt-4 .mb-0 }
 
-## Titles
----
-# H1 - heading
+## H2 — heading
+{: data-toc-skip='' .mt-4 .mb-0 }
 
-<h2 data-toc-skip>H2 - heading</h2>
+### H3 — heading
+{: data-toc-skip='' .mt-4 .mb-0 }
 
-<h3 data-toc-skip>H3 - heading</h3>
-
-<h4>H4 - heading</h4>
----
-<br>
+#### H4 — heading
+{: data-toc-skip='' .mt-4 }
+<!-- markdownlint-restore -->
 
 ## Paragraph
 
@@ -43,15 +46,15 @@ Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas int
 ### Unordered list
 
 - Chapter
-  + Section
-    * Paragraph
+  - Section
+    - Paragraph
 
 ### ToDo list
 
 - [ ] Job
-  + [x] Step 1
-  + [x] Step 2
-  + [ ] Step 3
+  - [x] Step 1
+  - [x] Step 2
+  - [ ] Step 3
 
 ### Description list
 
@@ -67,6 +70,8 @@ Moon
 
 ## Prompts
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
 > An example showing the `tip` type prompt.
 {: .prompt-tip }
 
@@ -78,14 +83,15 @@ Moon
 
 > An example showing the `danger` type prompt.
 {: .prompt-danger }
+<!-- markdownlint-restore -->
 
 ## Tables
 
 | Company                      | Contact          | Country |
-|:-----------------------------|:-----------------|--------:|
+| :--------------------------- | :--------------- | ------: |
 | Alfreds Futterkiste          | Maria Anders     | Germany |
-| Island Trading               | Helen Bennett    | UK      |
-| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
+| Island Trading               | Helen Bennett    |      UK |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli |   Italy |
 
 ## Links
 
@@ -95,35 +101,56 @@ Moon
 
 Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
 
-## Images
+## Inline code
 
-- Default (with caption)
+This is an example of `Inline Code`.
 
-![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" }
-_Full screen width and center alignment_
+## Filepath
 
-<br>
+Here is the `/path/to/the/file.extend`{: .filepath}.
 
-- Shadow
+## Code blocks
 
-![Window shadow](/posts/20190808/window.png){: .shadow width="1548" height="864" .w-75 }
-_shadow effect (visible in light mode)_
+### Common
 
-<br>
+```text
+This is a common code snippet, without syntax highlight and line number.
+```
 
-- Left aligned
+### Specific Language
 
-![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-75 .normal}
+```bash
+if [ $? -ne 0 ]; then
+  echo "The command was not successful.";
+  #do the needful / exit
+fi;
+```
 
-- Float to left
+### Specific filename
 
-  ![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .left}
-  Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum. Phasellus a tortor aliquam, tristique felis sit amet, elementum enim. Integer vestibulum vitae nulla nec pretium.
+```sass
+@import
+  "colors/light-typography",
+  "colors/dark-typography";
+```
+{: file='_sass/jekyll-theme-chirpy.scss'}
 
-- Float to right
+## Mathematics
 
-  ![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .right}
-  Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum. Phasellus a tortor aliquam, tristique felis sit amet, elementum enim. Integer vestibulum vitae nulla nec pretium.
+The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+
+$$
+\begin{equation}
+  \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
+  \label{eq:series}
+\end{equation}
+$$
+
+We can reference the equation as \eqref{eq:series}.
+
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 ## Mermaid SVG
 
@@ -135,59 +162,37 @@ _shadow effect (visible in light mode)_
   cherry :active, c, after b a, 1d
 ```
 
-## Mathematics
+## Images
 
-The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+### Default (with caption)
 
-$$ \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} $$
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" }
+_Full screen width and center alignment_
 
-When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+### Left aligned
 
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-75 .normal}
 
-## Inline code
+### Float to left
 
-This is an example of `Inline Code`.
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .left}
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
 
-## Filepath
+### Float to right
 
-Here is the `/path/to/the/file.extend`{: .filepath}.
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .right}
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
 
-## Code block
+### Dark/Light mode & Shadow
 
-### Common
+The image below will toggle dark/light mode based on theme preference, notice it has shadows.
 
-```
-This is a common code snippet, without syntax highlight and line number.
-```
+![light mode only](/posts/20190808/devtools-light.png){: .light .w-75 .shadow .rounded-10 w='1212' h='668' }
+![dark mode only](/posts/20190808/devtools-dark.png){: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
 
-### Specific Languages
+## Video
 
-#### Console
-
-```console
-$ env |grep SHELL
-SHELL=/usr/local/bin/bash
-PYENV_SHELL=bash
-```
-
-#### Shell
-
-```bash
-if [ $? -ne 0 ]; then
-    echo "The command was not successful.";
-    #do the needful / exit
-fi;
-```
-
-### Specific filename
-
-```sass
-@import
-  "colors/light-typography",
-  "colors/dark-typography"
-```
-{: file='_sass/jekyll-theme-chirpy.scss'}
+{% include embed/youtube.html id='Balreaj8Yqs' %}
 
 ## Reverse Footnote
 
